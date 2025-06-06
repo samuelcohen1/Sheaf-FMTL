@@ -60,7 +60,18 @@ python evaluate.py --dataset rotated_mnist --model_path results/sheaf_fmtl_rmnis
 
 Our model achieves the following performance:
 
+## Rotated MNIST dataset
 
+| Algorithm | Test Accuracy | Transmitted Bits (MB) | FLOPS (×10¹²) | Memory (MB) |
+|-----------|--------------|----------------------|---------------|-------------|
+| Sheaf-FMTL (γ = 0.01) | 94.3 ± 0.12 | **38.2** | 240.7 | 7563.5 |
+| Sheaf-FMTL (γ = 0.03) | **94.5 ± 0.08** | 165.7 | 249.3 | 24022.2 |
+| dFedU | 94.4 ± 0.06 | 3230.9 | 1184.4 | 1582.9 |
+| D-PSGD | 92.22 ± 0.06 | 3230.9 | **236.8** | **1438.6** |
+| FedAvg | 81.4 ± 0.16 | 27.9 | 1184.1 | 1531.0 |
+| DITTO | 92.2 ± 0.11 | 27.9 | 473.8 | 1714.6 |
+| pFedMe | 90.05 ± 0.14 | 27.9 | 5923.6 | 1550.7 |
+| Per-FedAvg | 88.45 ± 0.11 | 27.9 | 202.0 | 1421.0 |
 
 
 ## Citation
