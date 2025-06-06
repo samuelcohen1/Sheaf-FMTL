@@ -48,3 +48,21 @@ python experiments/run_heterogeneous_cifar10.py --lambda_reg 0.001 --alpha 0.005
 - `--eta`: Learning rate for restriction maps
 - `--gamma`: Controls the dimension of the interaction space ($d_{ij} = ⌊\gamma d⌋$)
 - `--num_rounds`: Number of communication rounds
+
+## Evaluation
+To evaluate trained models:
+
+```bash
+python evaluate.py --dataset rotated_mnist --model_path results/sheaf_fmtl_rmnist.pth
+```
+
+## 
+
+If you use this code in your research, please cite:
+
+@article{benissaid2025sheaffmtl,
+  title={Tackling Feature and Sample Heterogeneity in Decentralized Multi-Task Learning: A Sheaf-Theoretic Approach},
+  author={Ben Issaid, Chaouki and Vepakomma, Praneeth and Bennis, Mehdi},
+  journal={Transactions on Machine Learning Research},
+  year={2025}
+}
