@@ -42,3 +42,9 @@ python experiments/run_heterogeneous_cifar10.py --lambda_reg 0.001 --alpha 0.005
 ```
 
 ## Key Parameters
+
+- --lambda_reg: Regularization parameter controlling task relationship strength
+- --alpha: Learning rate for model parameters
+- --eta: Learning rate for restriction maps
+- --gamma: Controls the dimension of the interaction space (dij = ⌊γd⌋)
+- --num_rounds: Number of communication rounds
