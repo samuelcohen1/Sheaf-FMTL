@@ -27,7 +27,7 @@ The experiments use six datasets:
 - **GLEAM:** Google Glass sensor data from 38 individuals
 - **School:** Exam results prediction for 139 schools
  
-R-MNIST and H-CIFAR-10 datasets will be automatically downloaded when running experiments. The rest of the datasets can be found in the datasets folder.
+R-MNIST and H-CIFAR-10 datasets will be automatically downloaded when running experiments. The rest of the datasets can be found in [here](https://www.dropbox.com/scl/fi/lmowok6urm9tgxa7fy00r/private_silos_data.zip?dl=0&e=1&file_subpath=%2Fprivate_silos_data&rlkey=a92z4c5d461t4fy1uei4p9tsb)[^The datasets are provided by the following paper: Liu, Ken, et al. "On privacy and personalization in cross-silo federated learning." Advances in neural information processing systems 35 (2022): 5925-5940.]. Put datasets in the following structure: `data/<dataset_name>/<content>`, e.g. `data/vehicle.mat`.
 
 ## Training
 
