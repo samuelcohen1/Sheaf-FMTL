@@ -71,6 +71,7 @@ plot_training_curves(
     title="Sheaf-FMTL on Rotated MNIST",
     save_path="figures/rmnist_training_curves.png"
 )
+```
 
 ## Results
 
