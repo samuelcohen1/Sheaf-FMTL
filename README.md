@@ -53,8 +53,6 @@ python experiments/run_heterogeneous_cifar10.py --lambda_reg 0.001 --alpha 0.005
 
 The `utils/visualization.py` module provides comprehensive plotting utilities for analyzing experimental results. Here's how to use them:
 
-### Loading and Plotting Results
-
 ```python
 from utils.visualization import (
     plot_training_curves, plot_comparison, plot_communication_accuracy_tradeoff,
