@@ -154,15 +154,3 @@ class SheafFMTL:
                     print(f"Round {round_idx}: Avg Accuracy = {accuracy:.4f}")
         
         return history
-    
-    def _calculate_communication_bits(self) -> int:
-        """Calculate communication bits for one round"""
-        bits = 0
-        bits_per_param = 32  # Assuming 32-bit floats
-        
-        for i in range(self.num_clients):
-            for j in self.graph.neighbors(i):
-                d_ij = self.P[(i, j)].shape[0]
-                bits += 2 * d_ij * bits_per_param  # Two-way communication
-        
-        return bits
