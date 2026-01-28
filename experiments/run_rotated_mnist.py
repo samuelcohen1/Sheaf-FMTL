@@ -28,12 +28,20 @@ def main(args):
     
     # Generate communication graph
     print(f"Generating {args.graph_type} communication graph...")
+    
+    # # Print args
+    # print("Experiment arguments:")
+    # for arg, val in vars(args).items():
+    #     print(f"  {arg}: {val}")
+
+
     graph = generate_graph_by_type(
         args.num_clients, 
         graph_type=args.graph_type,
         edge_probability=args.edge_probability,
         seed=args.seed
     )
+
     
     # Print graph statistics
     stats = get_graph_statistics(graph)

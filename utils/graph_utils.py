@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def generate_random_graph(num_clients, edge_probability=0.15, seed=None):
     """Generate a random connected graph using Erdős-Rényi model"""
     while True:
-        g = nx.erdos_renyi_graph(num_clients, edge_probability, seed=seed)
+        g = nx.erdos_renyi_graph(num_clients, edge_probability)
         if nx.is_connected(g):
             return g
 
