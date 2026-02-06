@@ -91,13 +91,15 @@ def main(args):
         # Train all clients
         for client_id in range(args.num_clients):
             # Set optimizer with momentum for CIFAR-10
+            t0 = time.time()
             optimizer = torch.optim.SGD(
                 client_models[client_id].parameters(), 
                 lr=args.alpha, 
                 momentum=0.9, 
                 weight_decay=1e-3
             )
-            
+            print(f"Client {client_id} optimizer initialization time: {time.time() - t0:.2f}s")
+            t0 = time.time()
             # Local update
             sheaf_fmtl.local_update(
                 client_id, 
@@ -105,12 +107,19 @@ def main(args):
                 local_epochs=args.local_epochs,
                 l2_strength=args.l2_strength
             )
+            print(f"Client {client_id} local update time: {time.time() - t0:.2f}s")
+            t0 = time.time()
+
             
             # Sheaf update
             sheaf_fmtl.sheaf_update(client_id)
+            print(f"Client {client_id} sheaf update time: {time.time() - t0:.2f}s")
+            t0 = time.time()
             
             # Update restriction maps
             sheaf_fmtl.update_restriction_maps(client_id)
+            print(f"Client {client_id} restriction map update time: {time.time() - t0:.2f}s")
+            t0 = time.time()
         
         # Calculate metrics
         cumulative_bits += bits_per_round

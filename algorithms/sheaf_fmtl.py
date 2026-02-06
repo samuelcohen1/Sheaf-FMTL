@@ -60,14 +60,23 @@ class SheafFMTL:
         
         model.train()
         for epoch in range(local_epochs):
+            # print(f"Client {client_id} - Local Epoch {epoch+1}/{local_epochs}")
+            # print(len(dataloader))
             for X_batch, y_batch in dataloader:
+                # print(f"Client {client_id} - Batch size: {X_batch.size(0)}")
                 optimizer.zero_grad()
                 outputs = model(X_batch)
                 loss = criterion(outputs, y_batch)
                 
                 # Add L2 regularization
-                l2_reg = sum(param.pow(2).sum() for param in model.parameters())
-                loss = loss + l2_strength * l2_reg
+                # l2_reg = sum(param.pow(2).sum() for param in model.parameters())
+                # loss = loss + l2_strength * l2_reg
+                # optimizer = torch.optim.SGD(
+                # model.parameters(),
+                # lr=self.alpha,
+                # weight_decay=l2_strength
+                # )
+
                 
                 loss.backward()
                 optimizer.step()
@@ -77,6 +86,8 @@ class SheafFMTL:
         with torch.no_grad():
             # Extract theta_i as a vector
             theta_i = self._get_model_params(client_id)
+            
+            print(f"Size of theta_i for client {client_id}: {theta_i.size(0)}")
             
             # Compute sheaf Laplacian term
             sum_P_terms = torch.zeros_like(theta_i)
