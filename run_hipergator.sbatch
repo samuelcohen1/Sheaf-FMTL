@@ -1,20 +1,16 @@
 #!/bin/bash
-#SBATCH --job-name=sheaf_fmtl            # job name
-#SBATCH --partition=gpu                  # partition/queue
-#SBATCH --gres=gpu:1                     # request 1 GPU
+#SBATCH --job-name=sheaf_fmtl
+#SBATCH --partition=hpg-default        # replace if you prefer another valid partition from `sinfo`
+#SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
-#SBATCH --time=12:00:00
-#SBATCH --output=slurm-%j.out            # stdout/stderr file
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=02:00:00
+#SBATCH --output=slurm-%j.out
 
-# load environment (adjust to your site)
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate sheaf_fmtl  # must have CUDA-enabled PyTorch
+# activate venv in repo (use absolute path if created elsewhere)
+source $PWD/venv/bin/activate
 
-# optional: limit visible GPU
-# export CUDA_VISIBLE_DEVICES=0
-
-# run your script
-python -m experiments.run_heterogeneous_cifar10 --num_rounds 5 --num_clients 10
+# run
+python -m experiments.run_heterogeneous_cifar10 --device cuda --num_rounds 5 --num_clients 10
