@@ -237,7 +237,9 @@ def save_results_to_json(results: Dict, filepath: str):
     """Save results to JSON file"""
     # Convert torch tensors and numpy arrays to lists
     def convert_to_serializable(obj):
-        if isinstance(obj, (torch.Tensor, np.ndarray)):
+        if isinstance(obj, torch.Tensor):
+            return obj.detach().cpu().tolist()
+        if isinstance(obj, np.ndarray):
             return obj.tolist()
         elif isinstance(obj, dict):
             return {k: convert_to_serializable(v) for k, v in obj.items()}

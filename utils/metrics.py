@@ -12,6 +12,14 @@ def evaluate_accuracy(model, dataset, batch_size=64):
     
     with torch.no_grad():
         for data, targets in dataloader:
+            # Move data to the same device as model
+            try:
+                device = next(model.parameters()).device
+            except StopIteration:
+                device = torch.device('cpu')
+            data = data.to(device)
+            targets = targets.to(device)
+
             outputs = model(data)
             _, predicted = torch.max(outputs.data, 1)
             total += targets.size(0)

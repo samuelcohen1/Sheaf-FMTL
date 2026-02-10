@@ -29,6 +29,13 @@ class SheafFMTL:
         self.eta = eta
         self.gamma = gamma
         self.num_clients = len(models)
+        # Device (GPU if available)
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f"Using device: {self.device}")
+
+        # Move models to device
+        for m in self.models:
+            m.to(self.device)
         
         # Initialize restriction maps
         self.P = self._initialize_restriction_maps()
@@ -45,9 +52,9 @@ class SheafFMTL:
             # Dimension of interaction space
             d_ij = int(self.gamma * min(num_params_i, num_params_j))
             
-            # Initialize restriction maps
-            P[(i, j)] = torch.randn(d_ij, num_params_i) * 0.01
-            P[(j, i)] = torch.randn(d_ij, num_params_j) * 0.01
+            # Initialize restriction maps on the selected device
+            P[(i, j)] = (torch.randn(d_ij, num_params_i, device=self.device) * 0.01)
+            P[(j, i)] = (torch.randn(d_ij, num_params_j, device=self.device) * 0.01)
             
         return P
     
@@ -63,6 +70,9 @@ class SheafFMTL:
             # print(f"Client {client_id} - Local Epoch {epoch+1}/{local_epochs}")
             # print(len(dataloader))
             for X_batch, y_batch in dataloader:
+                # Move data to device
+                X_batch = X_batch.to(self.device)
+                y_batch = y_batch.to(self.device)
                 # print(f"Client {client_id} - Batch size: {X_batch.size(0)}")
                 optimizer.zero_grad()
                 outputs = model(X_batch)
@@ -87,7 +97,7 @@ class SheafFMTL:
             # Extract theta_i as a vector
             theta_i = self._get_model_params(client_id)
             
-            print(f"Size of theta_i for client {client_id}: {theta_i.size(0)}")
+            # print(f"Size of theta_i for client {client_id}: {theta_i.size(0)}")
             
             # Compute sheaf Laplacian term
             sum_P_terms = torch.zeros_like(theta_i)
