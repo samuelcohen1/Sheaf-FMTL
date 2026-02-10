@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=sheaf_fmtl
-#SBATCH --partition=hpg-default        # replace if you prefer another valid partition from `sinfo`
+#SBATCH --partition=hpg-b200        # replace if you prefer another valid partition from `sinfo`
 #SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -13,4 +13,4 @@
 source $PWD/venv/bin/activate
 
 # run
-python -m experiments.run_heterogeneous_cifar10 --device cuda --num_rounds 5 --num_clients 10
+python -m experiments.run_heterogeneous_cifar10  --num_rounds 5 --num_clients 10

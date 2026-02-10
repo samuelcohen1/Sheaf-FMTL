@@ -1,0 +1,228 @@
+Preparing Heterogeneous CIFAR-10 dataset...
+  0%|          | 0.00/170M [00:00<?, ?B/s]  0%|          | 98.3k/170M [00:00<03:06, 915kB/s]  1%|          | 918k/170M [00:00<00:36, 4.70MB/s]  4%|▍         | 6.42M/170M [00:00<00:06, 24.9MB/s]  8%|▊         | 14.4M/170M [00:00<00:03, 44.9MB/s] 12%|█▏        | 21.0M/170M [00:00<00:02, 52.2MB/s] 17%|█▋        | 28.3M/170M [00:00<00:02, 58.3MB/s] 21%|██        | 36.0M/170M [00:00<00:02, 64.0MB/s] 25%|██▌       | 42.8M/170M [00:00<00:01, 65.4MB/s] 30%|██▉       | 50.3M/170M [00:00<00:01, 67.9MB/s] 34%|███▎      | 57.4M/170M [00:01<00:01, 68.6MB/s] 38%|███▊      | 64.4M/170M [00:01<00:01, 69.0MB/s] 42%|████▏     | 71.6M/170M [00:01<00:01, 70.0MB/s] 46%|████▌     | 78.7M/170M [00:01<00:01, 70.4MB/s] 50%|█████     | 85.9M/170M [00:01<00:01, 70.7MB/s] 55%|█████▍    | 93.0M/170M [00:01<00:01, 70.7MB/s] 59%|█████▊    | 100M/170M [00:01<00:00, 71.0MB/s]  63%|██████▎   | 107M/170M [00:01<00:00, 71.4MB/s] 67%|██████▋   | 115M/170M [00:01<00:00, 71.4MB/s] 71%|███████▏  | 122M/170M [00:01<00:00, 71.7MB/s] 76%|███████▌  | 129M/170M [00:02<00:00, 71.9MB/s] 80%|███████▉  | 136M/170M [00:02<00:00, 71.8MB/s] 84%|████████▍ | 144M/170M [00:02<00:00, 71.5MB/s] 89%|████████▊ | 151M/170M [00:02<00:00, 72.0MB/s] 93%|█████████▎| 158M/170M [00:02<00:00, 71.7MB/s] 97%|█████████▋| 165M/170M [00:02<00:00, 71.8MB/s]100%|██████████| 170M/170M [00:02<00:00, 65.0MB/s]
+Number of samples per class: [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000]
+Distributing data to clients:   0%|          | 0/10 [00:00<?, ?it/s]Distributing data to clients:  10%|█         | 1/10 [00:02<00:23,  2.56s/it]Distributing data to clients:  20%|██        | 2/10 [00:04<00:16,  2.08s/it]Distributing data to clients:  30%|███       | 3/10 [00:05<00:12,  1.75s/it]Distributing data to clients:  40%|████      | 4/10 [00:07<00:09,  1.65s/it]Distributing data to clients:  50%|█████     | 5/10 [00:09<00:08,  1.73s/it]Distributing data to clients:  60%|██████    | 6/10 [00:11<00:07,  1.92s/it]Distributing data to clients:  70%|███████   | 7/10 [00:13<00:06,  2.10s/it]Distributing data to clients:  80%|████████  | 8/10 [00:14<00:03,  1.53s/it]Distributing data to clients:  90%|█████████ | 9/10 [00:14<00:01,  1.14s/it]Distributing data to clients: 100%|██████████| 10/10 [00:14<00:00,  1.20it/s]Distributing data to clients: 100%|██████████| 10/10 [00:14<00:00,  1.45s/it]
+Client 0: Train samples = 5535, Test samples = 1845, Classes = [np.int64(0), np.int64(1), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8)]
+Client 1: Train samples = 3531, Test samples = 1177, Classes = [np.int64(0), np.int64(1), np.int64(3), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Client 2: Train samples = 4132, Test samples = 1378, Classes = [np.int64(0), np.int64(2), np.int64(3), np.int64(6), np.int64(8), np.int64(9)]
+Client 3: Train samples = 3361, Test samples = 1121, Classes = [np.int64(1), np.int64(2), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Client 4: Train samples = 3189, Test samples = 1063, Classes = [np.int64(0), np.int64(1), np.int64(3), np.int64(4), np.int64(5), np.int64(8), np.int64(9)]
+Client 5: Train samples = 4495, Test samples = 1499, Classes = [np.int64(2), np.int64(3), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Client 6: Train samples = 2850, Test samples = 950, Classes = [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6)]
+Client 7: Train samples = 2631, Test samples = 877, Classes = [np.int64(0), np.int64(1), np.int64(3), np.int64(4), np.int64(5), np.int64(8)]
+Client 8: Train samples = 2403, Test samples = 801, Classes = [np.int64(0), np.int64(2), np.int64(4), np.int64(5), np.int64(7), np.int64(8), np.int64(9)]
+Client 9: Train samples = 1329, Test samples = 443, Classes = [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(6), np.int64(7)]
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 10, 'num_edges': 9, 'avg_degree': 1.8, 'max_degree': 4, 'min_degree': 1, 'diameter': 5, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 5 rounds...
+Communication bits per round: 108,544
+Client 0 optimizer initialization time: 0.00s
+Client 0 local update time: 1.18s
+Client 0 sheaf update time: 0.05s
+Client 0 restriction map update time: 0.00s
+Client 1 optimizer initialization time: 0.00s
+Client 1 local update time: 0.13s
+Client 1 sheaf update time: 0.00s
+Client 1 restriction map update time: 0.00s
+Client 2 optimizer initialization time: 0.00s
+Client 2 local update time: 0.10s
+Client 2 sheaf update time: 0.00s
+Client 2 restriction map update time: 0.00s
+Client 3 optimizer initialization time: 0.00s
+Client 3 local update time: 0.08s
+Client 3 sheaf update time: 0.00s
+Client 3 restriction map update time: 0.00s
+Client 4 optimizer initialization time: 0.00s
+Client 4 local update time: 0.08s
+Client 4 sheaf update time: 0.00s
+Client 4 restriction map update time: 0.00s
+Client 5 optimizer initialization time: 0.00s
+Client 5 local update time: 0.11s
+Client 5 sheaf update time: 0.00s
+Client 5 restriction map update time: 0.00s
+Client 6 optimizer initialization time: 0.00s
+Client 6 local update time: 0.07s
+Client 6 sheaf update time: 0.00s
+Client 6 restriction map update time: 0.00s
+Client 7 optimizer initialization time: 0.00s
+Client 7 local update time: 0.06s
+Client 7 sheaf update time: 0.00s
+Client 7 restriction map update time: 0.00s
+Client 8 optimizer initialization time: 0.00s
+Client 8 local update time: 0.05s
+Client 8 sheaf update time: 0.00s
+Client 8 restriction map update time: 0.00s
+Client 9 optimizer initialization time: 0.00s
+Client 9 local update time: 0.03s
+Client 9 sheaf update time: 0.00s
+Client 9 restriction map update time: 0.00s
+Round   0: Avg Test Accuracy = 0.4616, Bits = 0.11 MB, Time = 1.95s
+Client 0 optimizer initialization time: 0.00s
+Client 0 local update time: 0.11s
+Client 0 sheaf update time: 0.00s
+Client 0 restriction map update time: 0.00s
+Client 1 optimizer initialization time: 0.00s
+Client 1 local update time: 0.09s
+Client 1 sheaf update time: 0.00s
+Client 1 restriction map update time: 0.00s
+Client 2 optimizer initialization time: 0.00s
+Client 2 local update time: 0.10s
+Client 2 sheaf update time: 0.00s
+Client 2 restriction map update time: 0.00s
+Client 3 optimizer initialization time: 0.00s
+Client 3 local update time: 0.08s
+Client 3 sheaf update time: 0.00s
+Client 3 restriction map update time: 0.00s
+Client 4 optimizer initialization time: 0.00s
+Client 4 local update time: 0.08s
+Client 4 sheaf update time: 0.00s
+Client 4 restriction map update time: 0.00s
+Client 5 optimizer initialization time: 0.00s
+Client 5 local update time: 0.10s
+Client 5 sheaf update time: 0.00s
+Client 5 restriction map update time: 0.00s
+Client 6 optimizer initialization time: 0.00s
+Client 6 local update time: 0.07s
+Client 6 sheaf update time: 0.00s
+Client 6 restriction map update time: 0.00s
+Client 7 optimizer initialization time: 0.00s
+Client 7 local update time: 0.06s
+Client 7 sheaf update time: 0.00s
+Client 7 restriction map update time: 0.00s
+Client 8 optimizer initialization time: 0.00s
+Client 8 local update time: 0.06s
+Client 8 sheaf update time: 0.00s
+Client 8 restriction map update time: 0.00s
+Client 9 optimizer initialization time: 0.00s
+Client 9 local update time: 0.03s
+Client 9 sheaf update time: 0.00s
+Client 9 restriction map update time: 0.00s
+Client 0 optimizer initialization time: 0.00s
+Client 0 local update time: 0.13s
+Client 0 sheaf update time: 0.00s
+Client 0 restriction map update time: 0.00s
+Client 1 optimizer initialization time: 0.00s
+Client 1 local update time: 0.07s
+Client 1 sheaf update time: 0.00s
+Client 1 restriction map update time: 0.00s
+Client 2 optimizer initialization time: 0.00s
+Client 2 local update time: 0.10s
+Client 2 sheaf update time: 0.00s
+Client 2 restriction map update time: 0.00s
+Client 3 optimizer initialization time: 0.00s
+Client 3 local update time: 0.08s
+Client 3 sheaf update time: 0.00s
+Client 3 restriction map update time: 0.00s
+Client 4 optimizer initialization time: 0.00s
+Client 4 local update time: 0.08s
+Client 4 sheaf update time: 0.00s
+Client 4 restriction map update time: 0.00s
+Client 5 optimizer initialization time: 0.00s
+Client 5 local update time: 0.11s
+Client 5 sheaf update time: 0.00s
+Client 5 restriction map update time: 0.00s
+Client 6 optimizer initialization time: 0.00s
+Client 6 local update time: 0.07s
+Client 6 sheaf update time: 0.00s
+Client 6 restriction map update time: 0.00s
+Client 7 optimizer initialization time: 0.00s
+Client 7 local update time: 0.06s
+Client 7 sheaf update time: 0.00s
+Client 7 restriction map update time: 0.00s
+Client 8 optimizer initialization time: 0.00s
+Client 8 local update time: 0.06s
+Client 8 sheaf update time: 0.00s
+Client 8 restriction map update time: 0.00s
+Client 9 optimizer initialization time: 0.00s
+Client 9 local update time: 0.03s
+Client 9 sheaf update time: 0.00s
+Client 9 restriction map update time: 0.00s
+Client 0 optimizer initialization time: 0.00s
+Client 0 local update time: 0.13s
+Client 0 sheaf update time: 0.00s
+Client 0 restriction map update time: 0.00s
+Client 1 optimizer initialization time: 0.00s
+Client 1 local update time: 0.09s
+Client 1 sheaf update time: 0.00s
+Client 1 restriction map update time: 0.00s
+Client 2 optimizer initialization time: 0.00s
+Client 2 local update time: 0.10s
+Client 2 sheaf update time: 0.00s
+Client 2 restriction map update time: 0.00s
+Client 3 optimizer initialization time: 0.00s
+Client 3 local update time: 0.08s
+Client 3 sheaf update time: 0.00s
+Client 3 restriction map update time: 0.00s
+Client 4 optimizer initialization time: 0.00s
+Client 4 local update time: 0.08s
+Client 4 sheaf update time: 0.00s
+Client 4 restriction map update time: 0.00s
+Client 5 optimizer initialization time: 0.00s
+Client 5 local update time: 0.11s
+Client 5 sheaf update time: 0.00s
+Client 5 restriction map update time: 0.00s
+Client 6 optimizer initialization time: 0.00s
+Client 6 local update time: 0.07s
+Client 6 sheaf update time: 0.00s
+Client 6 restriction map update time: 0.00s
+Client 7 optimizer initialization time: 0.00s
+Client 7 local update time: 0.06s
+Client 7 sheaf update time: 0.00s
+Client 7 restriction map update time: 0.00s
+Client 8 optimizer initialization time: 0.00s
+Client 8 local update time: 0.06s
+Client 8 sheaf update time: 0.00s
+Client 8 restriction map update time: 0.00s
+Client 9 optimizer initialization time: 0.00s
+Client 9 local update time: 0.03s
+Client 9 sheaf update time: 0.00s
+Client 9 restriction map update time: 0.00s
+Client 0 optimizer initialization time: 0.00s
+Client 0 local update time: 0.12s
+Client 0 sheaf update time: 0.00s
+Client 0 restriction map update time: 0.00s
+Client 1 optimizer initialization time: 0.00s
+Client 1 local update time: 0.09s
+Client 1 sheaf update time: 0.00s
+Client 1 restriction map update time: 0.00s
+Client 2 optimizer initialization time: 0.00s
+Client 2 local update time: 0.10s
+Client 2 sheaf update time: 0.00s
+Client 2 restriction map update time: 0.00s
+Client 3 optimizer initialization time: 0.00s
+Client 3 local update time: 0.08s
+Client 3 sheaf update time: 0.00s
+Client 3 restriction map update time: 0.00s
+Client 4 optimizer initialization time: 0.00s
+Client 4 local update time: 0.07s
+Client 4 sheaf update time: 0.00s
+Client 4 restriction map update time: 0.00s
+Client 5 optimizer initialization time: 0.00s
+Client 5 local update time: 0.10s
+Client 5 sheaf update time: 0.00s
+Client 5 restriction map update time: 0.00s
+Client 6 optimizer initialization time: 0.00s
+Client 6 local update time: 0.07s
+Client 6 sheaf update time: 0.00s
+Client 6 restriction map update time: 0.00s
+Client 7 optimizer initialization time: 0.00s
+Client 7 local update time: 0.06s
+Client 7 sheaf update time: 0.00s
+Client 7 restriction map update time: 0.00s
+Client 8 optimizer initialization time: 0.00s
+Client 8 local update time: 0.06s
+Client 8 sheaf update time: 0.00s
+Client 8 restriction map update time: 0.00s
+Client 9 optimizer initialization time: 0.00s
+Client 9 local update time: 0.03s
+Client 9 sheaf update time: 0.00s
+Client 9 restriction map update time: 0.00s
+
+Training completed!
+Final average test accuracy: 0.5757
+Total communication: 0.54 MB
+Total time: 5.13 seconds

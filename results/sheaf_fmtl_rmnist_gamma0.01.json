@@ -1,0 +1,56 @@
+{
+  "args": {
+    "num_clients": 10,
+    "num_rotations": 4,
+    "lambda_reg": 0.001,
+    "alpha": 0.0005,
+    "eta": 1e-05,
+    "gamma": 0.01,
+    "num_rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 5,
+    "l2_strength": 0.01,
+    "graph_type": "erdos_renyi",
+    "edge_probability": 0.15,
+    "seed": 42,
+    "print_every": 1,
+    "visualize_graph": false,
+    "save_results": true
+  },
+  "graph_stats": {
+    "num_nodes": 10,
+    "num_edges": 10,
+    "avg_degree": 2.0,
+    "max_degree": 4,
+    "min_degree": 1,
+    "diameter": 5,
+    "avg_clustering": 0.0,
+    "is_connected": true
+  },
+  "history": {
+    "test_accuracy": [
+      0.4777,
+      0.6453,
+      0.7273,
+      0.7971000000000001,
+      0.8211999999999999
+    ],
+    "communication_bits": [
+      89088,
+      178176,
+      267264,
+      356352,
+      445440
+    ],
+    "cpu_time": [
+      34.376949310302734,
+      67.2012460231781,
+      99.76704573631287,
+      132.41661429405212,
+      165.22376036643982
+    ]
+  },
+  "final_accuracy": 0.8211999999999999,
+  "total_communication_mb": 0.44544,
+  "total_time_seconds": 165.22376036643982
+}
