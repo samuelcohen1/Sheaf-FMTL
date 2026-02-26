@@ -3,6 +3,7 @@ import torch.nn as nn
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 import copy
+import threading
 
 class SheafFMTL:
     """
@@ -29,15 +30,18 @@ class SheafFMTL:
         self.eta = eta
         self.gamma = gamma
         self.num_clients = len(models)
-        # Device (GPU if available)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print(f"Using device: {self.device}")
 
-        # Move models to device
         for m in self.models:
             m.to(self.device)
         
-        # Initialize restriction maps
+        # One CUDA stream per client for parallel local updates
+        if self.device.type == "cuda":
+            self.streams = [torch.cuda.Stream() for _ in range(self.num_clients)]
+        else:
+            self.streams = None
+
         self.P = self._initialize_restriction_maps()
         
     def _initialize_restriction_maps(self) -> Dict[Tuple[int, int], torch.Tensor]:
@@ -45,14 +49,11 @@ class SheafFMTL:
         P = {}
         
         for i, j in self.graph.edges():
-            # Calculate dimensions
             num_params_i = sum(p.numel() for p in self.models[i].parameters())
             num_params_j = sum(p.numel() for p in self.models[j].parameters())
             
-            # Dimension of interaction space
             d_ij = int(self.gamma * min(num_params_i, num_params_j))
             
-            # Initialize restriction maps on the selected device
             P[(i, j)] = (torch.randn(d_ij, num_params_i, device=self.device) * 0.01)
             P[(j, i)] = (torch.randn(d_ij, num_params_j, device=self.device) * 0.01)
             
@@ -67,39 +68,41 @@ class SheafFMTL:
         
         model.train()
         for epoch in range(local_epochs):
-            # print(f"Client {client_id} - Local Epoch {epoch+1}/{local_epochs}")
-            # print(len(dataloader))
             for X_batch, y_batch in dataloader:
-                # Move data to device
                 X_batch = X_batch.to(self.device)
                 y_batch = y_batch.to(self.device)
-                # print(f"Client {client_id} - Batch size: {X_batch.size(0)}")
                 optimizer.zero_grad()
                 outputs = model(X_batch)
                 loss = criterion(outputs, y_batch)
-                
-                # Add L2 regularization
-                # l2_reg = sum(param.pow(2).sum() for param in model.parameters())
-                # loss = loss + l2_strength * l2_reg
-                # optimizer = torch.optim.SGD(
-                # model.parameters(),
-                # lr=self.alpha,
-                # weight_decay=l2_strength
-                # )
-
-                
                 loss.backward()
                 optimizer.step()
-    
+
+    def local_update_all_parallel(self, client_dataloaders: List, local_epochs: int = 1):
+        """Run all clients' local updates in parallel using threads + CUDA streams"""
+
+        def worker(client_id):
+            if self.streams is not None:
+                with torch.cuda.stream(self.streams[client_id]):
+                    self.local_update(client_id, client_dataloaders[client_id], local_epochs)
+            else:
+                self.local_update(client_id, client_dataloaders[client_id], local_epochs)
+
+        threads = [threading.Thread(target=worker, args=(cid,))
+                   for cid in range(self.num_clients)]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+
+        # Ensure all GPU work is complete before sheaf updates read neighbor models
+        if self.device.type == "cuda":
+            torch.cuda.synchronize()
+
     def sheaf_update(self, client_id: int):
         """Update client model using sheaf Laplacian regularization"""
         with torch.no_grad():
-            # Extract theta_i as a vector
             theta_i = self._get_model_params(client_id)
             
-            # print(f"Size of theta_i for client {client_id}: {theta_i.size(0)}")
-            
-            # Compute sheaf Laplacian term
             sum_P_terms = torch.zeros_like(theta_i)
             
             for j in self.graph.neighbors(client_id):
@@ -107,13 +110,10 @@ class SheafFMTL:
                 P_ji = self.P[(j, client_id)]
                 theta_j = self._get_model_params(j)
                 
-                # Compute P_ij @ theta_i - P_ji @ theta_j
                 sum_P_terms += P_ij.T @ (P_ij @ theta_i - P_ji @ theta_j)
             
-            # Update theta_i
             theta_i -= self.alpha * self.lambda_reg * sum_P_terms
             
-            # Put updated parameters back into model
             self._set_model_params(client_id, theta_i)
     
     def update_restriction_maps(self, client_id: int):
@@ -126,7 +126,6 @@ class SheafFMTL:
                 P_ji = self.P[(j, client_id)]
                 theta_j = self._get_model_params(j)
                 
-                # Update P_ij
                 diff = P_ij @ theta_i - P_ji @ theta_j
                 self.P[(client_id, j)] -= self.eta * self.lambda_reg * torch.outer(diff, theta_i)
     
@@ -149,23 +148,15 @@ class SheafFMTL:
         cumulative_bits = 0
         
         for round_idx in range(num_rounds):
-            # Local updates and sheaf updates for all clients
             for client_id in range(self.num_clients):
-                # Local training
                 self.local_update(client_id, client_dataloaders[client_id], 
                                 local_epochs=local_epochs)
-                
-                # Sheaf update
                 self.sheaf_update(client_id)
-                
-                # Update restriction maps
                 self.update_restriction_maps(client_id)
             
-            # Calculate communication cost
             round_bits = self._calculate_communication_bits()
             cumulative_bits += round_bits
             
-            # Evaluate if function provided
             if evaluate_fn is not None:
                 accuracy = evaluate_fn(self.models)
                 history['accuracy'].append(accuracy)
