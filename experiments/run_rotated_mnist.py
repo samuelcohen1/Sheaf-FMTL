@@ -90,29 +90,23 @@ def main(args):
     # Training loop
     for round_idx in range(args.num_rounds):
         round_start_time = time.time()
-        
-        local_times = []
+
+        # Phase 1: Parallel local updates
+        t0 = time.time()
+        sheaf_fmtl.local_update_all_parallel(train_loaders, local_epochs=args.local_epochs)
+        local_time = time.time() - t0
+
+        # Phase 2: Sequential sheaf + restriction updates
         sheaf_times = []
         restriction_times = []
-
-        # Train all clients
         for client_id in range(args.num_clients):
-                    # Phase 1: Parallel local updates
             t0 = time.time()
-            sheaf_fmtl.local_update_all_parallel(train_loaders, local_epochs=args.local_epochs)
-            local_time = time.time() - t0
+            sheaf_fmtl.sheaf_update(client_id)
+            sheaf_times.append(time.time() - t0)
 
-            # Phase 2: Sequential sheaf + restriction updates
-            sheaf_times = []
-            restriction_times = []
-            for client_id in range(args.num_clients):
-                t0 = time.time()
-                sheaf_fmtl.sheaf_update(client_id)
-                sheaf_times.append(time.time() - t0)
-
-                t0 = time.time()
-                sheaf_fmtl.update_restriction_maps(client_id)
-                restriction_times.append(time.time() - t0)
+            t0 = time.time()
+            sheaf_fmtl.update_restriction_maps(client_id)
+            restriction_times.append(time.time() - t0)
 
         print(
             f"Round {round_idx} times — "
@@ -120,6 +114,8 @@ def main(args):
             f"sheaf: {sum(sheaf_times):.3f}s (avg {np.mean(sheaf_times):.4f}s) | "
             f"restriction: {sum(restriction_times):.3f}s (avg {np.mean(restriction_times):.4f}s)"
         )
+
+        # ...existing code...
         
         # Calculate metrics
         cumulative_bits += bits_per_round
