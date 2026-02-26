@@ -88,9 +88,6 @@ def main(args):
     print(f"Communication bits per round: {bits_per_round:,}")
     
     # Training loop
-# ...existing code...
-    
-    # Training loop
     for round_idx in range(args.num_rounds):
         round_start_time = time.time()
         
@@ -123,7 +120,7 @@ def main(args):
             f"sheaf: {sum(sheaf_times):.3f}s (avg {np.mean(sheaf_times):.4f}s) | "
             f"restriction: {sum(restriction_times):.3f}s (avg {np.mean(restriction_times):.4f}s)"
         )
-
+        
         # Calculate metrics
         cumulative_bits += bits_per_round
         round_time = time.time() - round_start_time
