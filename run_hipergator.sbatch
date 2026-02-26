@@ -7,7 +7,8 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=02:00:00
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=logs/slurm-%j.out
+#SBATCH --error=logs/slurm-%j.err
 
 # activate venv in repo (use absolute path if created elsewhere)
 source $PWD/venv/bin/activate
