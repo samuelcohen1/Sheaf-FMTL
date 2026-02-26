@@ -14,4 +14,4 @@
 source $PWD/venv/bin/activate
 
 # run
-python -u -m experiments.run_heterogeneous_cifar10  --num_rounds 5 --num_clients 10
+python -u -m experiments.run_rotated_mnist  --num_rounds 5 --num_clients 10
