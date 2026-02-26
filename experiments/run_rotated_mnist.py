@@ -93,7 +93,14 @@ def main(args):
 
         # Phase 1: Parallel local updates
         t0 = time.time()
-        sheaf_fmtl.local_update_all_parallel(train_loaders, local_epochs=args.local_epochs)
+
+        # Parallel update
+        # sheaf_fmtl.local_update_all_parallel(train_loaders, local_epochs=args.local_epochs)
+        
+        # Sequential update (for timing comparison)
+        for client_id in range(args.num_clients):
+            sheaf_fmtl.local_update(client_id, train_loaders[client_id], local_epochs=args.local_epochs)
+        
         local_time = time.time() - t0
 
         # Phase 2: Sequential sheaf + restriction updates
