@@ -1,0 +1,20 @@
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 10, 'num_edges': 10, 'avg_degree': 2.0, 'max_degree': 4, 'min_degree': 1, 'diameter': 5, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 5 rounds...
+Communication bits per round: 89,088
+Round 0 times — local: 5.330s (avg 0.5330s) | sheaf: 0.044s (avg 0.0044s) | restriction: 0.004s (avg 0.0004s)
+Round   0: Avg Test Accuracy = 0.1574, Bits = 0.09 MB, Time = 5.38s
+Round 1 times — local: 1.834s (avg 0.1834s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 2 times — local: 1.873s (avg 0.1873s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 3 times — local: 1.885s (avg 0.1885s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 4 times — local: 1.912s (avg 0.1912s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+
+Training completed!
+Final average test accuracy: 0.4134
+Total communication: 0.45 MB
+Total time: 12.91 seconds
