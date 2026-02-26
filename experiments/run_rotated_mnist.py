@@ -88,33 +88,42 @@ def main(args):
     print(f"Communication bits per round: {bits_per_round:,}")
     
     # Training loop
+# ...existing code...
+    
+    # Training loop
     for round_idx in range(args.num_rounds):
         round_start_time = time.time()
         
+        local_times = []
+        sheaf_times = []
+        restriction_times = []
+
         # Train all clients
         for client_id in range(args.num_clients):
             t0 = time.time()
-
-            # Local update
             sheaf_fmtl.local_update(
                 client_id, 
                 train_loaders[client_id],
                 local_epochs=args.local_epochs,
                 l2_strength=args.l2_strength
             )
+            local_times.append(time.time() - t0)
 
-            print(f"Client {client_id} local update time: {time.time() - t0:.2f}s")
             t0 = time.time()
-            
-            # Sheaf update
             sheaf_fmtl.sheaf_update(client_id)
-            print(f"Client {client_id} sheaf update time: {time.time() - t0:.2f}s")
+            sheaf_times.append(time.time() - t0)
+
             t0 = time.time()
-            
-            # Update restriction maps
             sheaf_fmtl.update_restriction_maps(client_id)
-            print(f"Client {client_id} restriction map update time: {time.time() - t0:.2f}s")
-        
+            restriction_times.append(time.time() - t0)
+
+        print(
+            f"Round {round_idx} times — "
+            f"local: {sum(local_times):.3f}s (avg {np.mean(local_times):.4f}s) | "
+            f"sheaf: {sum(sheaf_times):.3f}s (avg {np.mean(sheaf_times):.4f}s) | "
+            f"restriction: {sum(restriction_times):.3f}s (avg {np.mean(restriction_times):.4f}s)"
+        )
+
         # Calculate metrics
         cumulative_bits += bits_per_round
         round_time = time.time() - round_start_time
