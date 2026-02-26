@@ -114,12 +114,12 @@ def main(args):
                 sheaf_fmtl.update_restriction_maps(client_id)
                 restriction_times.append(time.time() - t0)
 
-            print(
-                f"Round {round_idx} times — "
-                f"local: {local_time:.3f}s | "
-                f"sheaf: {sum(sheaf_times):.3f}s (avg {np.mean(sheaf_times):.4f}s) | "
-                f"restriction: {sum(restriction_times):.3f}s (avg {np.mean(restriction_times):.4f}s)"
-            )
+        print(
+            f"Round {round_idx} times — "
+            f"local: {local_time:.3f}s | "
+            f"sheaf: {sum(sheaf_times):.3f}s (avg {np.mean(sheaf_times):.4f}s) | "
+            f"restriction: {sum(restriction_times):.3f}s (avg {np.mean(restriction_times):.4f}s)"
+        )
         
         # Calculate metrics
         cumulative_bits += bits_per_round
