@@ -106,13 +106,14 @@ def main(args):
             )
             local_times.append(time.time() - t0)
 
-            t0 = time.time()
-            sheaf_fmtl.sheaf_update(client_id)
-            sheaf_times.append(time.time() - t0)
+            if args.mode == 'sheaf':
+                t0 = time.time()
+                sheaf_fmtl.sheaf_update(client_id)
+                sheaf_times.append(time.time() - t0)
 
-            t0 = time.time()
-            sheaf_fmtl.update_restriction_maps(client_id)
-            restriction_times.append(time.time() - t0)
+                t0 = time.time()
+                sheaf_fmtl.update_restriction_maps(client_id)
+                restriction_times.append(time.time() - t0)
 
         print(
             f"Round {round_idx} times — "
@@ -145,6 +146,7 @@ def main(args):
     # Save results
     results = {
         'args': vars(args),
+        'mode': args.mode,
         'graph_stats': stats,
         'history': history,
         'final_accuracy': history['test_accuracy'][-1],
@@ -184,7 +186,8 @@ if __name__ == "__main__":
     parser.add_argument('--local_epochs', type=int, default=1, help='Number of local epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
     parser.add_argument('--l2_strength', type=float, default=0.01, help='L2 regularization strength')
-    
+    parser.add_argument('--mode', type=str, default='sheaf', choices=['sheaf', 'local'], help='Training mode: sheaf or local')
+
     # Graph parameters
     parser.add_argument('--graph_type', type=str, default='erdos_renyi', 
                         choices=['erdos_renyi', 'small_world', 'scale_free', 'complete'],

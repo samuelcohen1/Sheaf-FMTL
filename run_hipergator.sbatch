@@ -14,4 +14,20 @@
 source $PWD/venv/bin/activate
 
 # run
-python -u -m experiments.run_rotated_mnist  --num_rounds 5 --num_clients 10
+# python -u -m experiments.run_rotated_mnist  --num_rounds 5 --num_clients 10
+
+echo "=== Running independent baseline ==="
+python -u -m experiments.run_rotated_mnist \
+    --mode local \
+    --num_rounds 5 \
+    --num_clients 10 \
+    --save_results
+
+echo "=== Running Sheaf-FMTL ==="
+python -u -m experiments.run_rotated_mnist \
+    --mode sheaf \
+    --num_rounds 5 \
+    --num_clients 10 \
+    --save_results
+
+echo "=== Both runs complete ==="
