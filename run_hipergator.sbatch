@@ -19,7 +19,7 @@ source $PWD/venv/bin/activate
 echo "=== Running independent baseline ==="
 python -u -m experiments.run_rotated_mnist \
     --mode local \
-    --num_rounds 5 \
+    --num_rounds 50 \
     --num_clients 10 \
     --save_results \
     --gamma 0.5
@@ -27,12 +27,12 @@ python -u -m experiments.run_rotated_mnist \
 echo "=== Running Sheaf-FMTL ==="
 python -u -m experiments.run_rotated_mnist \
     --mode sheaf \
-    --num_rounds 5 \
+    --num_rounds 50 \
     --num_clients 10 \
     --save_results \
     --eta 0.1 \
     --gamma 0.5 \
-    --lambda_reg 1.0
+    --lambda_reg 0.0002
 
 echo "=== Both runs complete ==="
 
