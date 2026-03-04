@@ -8,20 +8,22 @@
     "gamma": 0.01,
     "num_rounds": 5,
     "local_epochs": 1,
-    "batch_size": 5,
+    "batch_size": 32,
     "l2_strength": 0.01,
+    "mode": "sheaf",
     "graph_type": "erdos_renyi",
     "edge_probability": 0.15,
     "seed": 42,
-    "print_every": 1,
+    "print_every": 10,
     "visualize_graph": false,
     "save_results": true
   },
+  "mode": "sheaf",
   "graph_stats": {
     "num_nodes": 10,
     "num_edges": 10,
     "avg_degree": 2.0,
-    "max_degree": 4,
+    "max_degree": 3,
     "min_degree": 1,
     "diameter": 5,
     "avg_clustering": 0.0,
@@ -29,28 +31,28 @@
   },
   "history": {
     "test_accuracy": [
-      0.4777,
-      0.6453,
-      0.7273,
-      0.7971000000000001,
-      0.8211999999999999
+      0.15739999999999998,
+      0.2191,
+      0.27629999999999993,
+      0.34500000000000003,
+      0.4135
     ],
     "communication_bits": [
-      89088,
-      178176,
+      66816,
+      133632,
+      200448,
       267264,
-      356352,
-      445440
+      334080
     ],
     "cpu_time": [
-      34.376949310302734,
-      67.2012460231781,
-      99.76704573631287,
-      132.41661429405212,
-      165.22376036643982
+      3.989757776260376,
+      6.3645806312561035,
+      8.805241584777832,
+      11.17628526687622,
+      13.508320093154907
     ]
   },
-  "final_accuracy": 0.8211999999999999,
-  "total_communication_mb": 0.44544,
-  "total_time_seconds": 165.22376036643982
+  "final_accuracy": 0.4135,
+  "total_communication_mb": 0.33408,
+  "total_time_seconds": 13.508320093154907
 }
