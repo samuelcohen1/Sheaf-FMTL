@@ -22,7 +22,7 @@ python -u -m experiments.run_rotated_mnist \
     --num_rounds 5 \
     --num_clients 10 \
     --save_results \
-    --gamma 0.02
+    --gamma 0.5
 
 echo "=== Running Sheaf-FMTL ==="
 python -u -m experiments.run_rotated_mnist \
@@ -31,11 +31,11 @@ python -u -m experiments.run_rotated_mnist \
     --num_clients 10 \
     --save_results \
     --eta 0.01 \
-    --gamma 0.02
+    --gamma 0.5
 
 echo "=== Both runs complete ==="
 
 # ...existing code...
 echo "=== Both runs complete ==="
 
-python -u -m utils.plot_compare_mode --gamma 0.02   # not actually the right gamma
+python -u -m utils.plot_compare_mode --gamma 0.5   # not actually the right gamma
