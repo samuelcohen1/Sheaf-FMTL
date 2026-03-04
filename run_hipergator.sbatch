@@ -35,4 +35,4 @@ echo "=== Both runs complete ==="
 # ...existing code...
 echo "=== Both runs complete ==="
 
-python -u -m experiments.plot_compare_mode --gamma 0.01   # not actually the right gamma
+python -u -m utils.plot_compare_mode --gamma 0.01   # not actually the right gamma
