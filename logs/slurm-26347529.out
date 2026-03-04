@@ -1,0 +1,48 @@
+=== Running independent baseline ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 10, 'num_edges': 10, 'avg_degree': 2.0, 'max_degree': 4, 'min_degree': 1, 'diameter': 4, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 5 rounds...
+Communication bits per round: 89,088
+Round 0 times — local: 5.319s (avg 0.5319s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round   0: Avg Test Accuracy = 0.1574, Bits = 0.09 MB, Time = 5.32s
+Round 1 times — local: 2.095s (avg 0.2095s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 2 times — local: 2.023s (avg 0.2023s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 3 times — local: 2.189s (avg 0.2189s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 4 times — local: 2.160s (avg 0.2160s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+
+Results saved to results/sheaf_fmtl_rmnist_local_gamma0.01.json
+
+Training completed!
+Final average test accuracy: 0.4134
+Total communication: 0.45 MB
+Total time: 13.79 seconds
+=== Running Sheaf-FMTL ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 10, 'num_edges': 13, 'avg_degree': 2.6, 'max_degree': 5, 'min_degree': 1, 'diameter': 4, 'avg_clustering': 0.07666666666666666, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 5 rounds...
+Communication bits per round: 111,360
+Round 0 times — local: 3.707s (avg 0.3707s) | sheaf: 0.035s (avg 0.0035s) | restriction: 0.003s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.1574, Bits = 0.11 MB, Time = 3.75s
+Round 1 times — local: 2.156s (avg 0.2156s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 2 times — local: 2.262s (avg 0.2262s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 3 times — local: 2.009s (avg 0.2009s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+Round 4 times — local: 2.164s (avg 0.2164s) | sheaf: 0.004s (avg 0.0004s) | restriction: 0.002s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.01.json
+
+Training completed!
+Final average test accuracy: 0.4135
+Total communication: 0.56 MB
+Total time: 12.36 seconds
+=== Both runs complete ===
+=== Both runs complete ===
