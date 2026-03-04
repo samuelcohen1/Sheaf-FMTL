@@ -30,8 +30,9 @@ python -u -m experiments.run_rotated_mnist \
     --num_rounds 5 \
     --num_clients 10 \
     --save_results \
-    --eta 0.01 \
-    --gamma 0.5
+    --eta 0.1 \
+    --gamma 0.5 \
+    --lambda_reg 1.0
 
 echo "=== Both runs complete ==="
 
