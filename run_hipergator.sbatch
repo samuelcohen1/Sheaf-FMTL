@@ -28,7 +28,8 @@ python -u -m experiments.run_rotated_mnist \
     --mode sheaf \
     --num_rounds 5 \
     --num_clients 10 \
-    --save_results
+    --save_results \
+    --eta 0.01
 
 echo "=== Both runs complete ==="
 
