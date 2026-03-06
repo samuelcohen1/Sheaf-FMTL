@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=01:00:00
+#SBATCH --time=00:30:00
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 
@@ -16,10 +16,11 @@ GAMMA=0.01
 NUM_ROUNDS=100
 NUM_CLIENTS=4
 ALPHA=0.005
-LAMBDA_REG=0.001
+LAMBDA_REG=0.1
 BATCH_SIZE=256
-LOCAL_EPOCHS=2
-ETA_VALUES=(0.0001 0.001 0.01)
+LOCAL_EPOCHS=1
+GRAPH_TYPE=complete
+ETA_VALUES=(0.001 0.01 0.1)
 
 echo "=== Running independent baseline ==="
 python -u -m experiments.run_rotated_mnist \
@@ -32,6 +33,7 @@ python -u -m experiments.run_rotated_mnist \
     --lambda_reg $LAMBDA_REG \
     --batch_size $BATCH_SIZE \
     --local_epochs $LOCAL_EPOCHS \
+    --graph_type $GRAPH_TYPE \
     --save_results
 
 for ETA in "${ETA_VALUES[@]}"; do
@@ -47,6 +49,7 @@ for ETA in "${ETA_VALUES[@]}"; do
         --lambda_reg $LAMBDA_REG \
         --batch_size $BATCH_SIZE \
         --local_epochs $LOCAL_EPOCHS \
+        --graph_type $GRAPH_TYPE \
         --save_results
 done
 
