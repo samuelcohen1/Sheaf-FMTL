@@ -1,42 +1,41 @@
 #!/bin/bash
 #SBATCH --job-name=sheaf_fmtl
-#SBATCH --partition=hpg-b200        # replace if you prefer another valid partition from `sinfo`
+#SBATCH --partition=hpg-b200
 #SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 
-# activate venv in repo (use absolute path if created elsewhere)
 source $PWD/venv/bin/activate
 
-# run
-# python -u -m experiments.run_rotated_mnist  --num_rounds 5 --num_clients 10
+GAMMA=0.5
+NUM_ROUNDS=50
+NUM_CLIENTS=10
+ETA_VALUES=(0.0001 0.001 0.01 0.1)
 
 echo "=== Running independent baseline ==="
 python -u -m experiments.run_rotated_mnist \
     --mode local \
-    --num_rounds 50 \
-    --num_clients 10 \
-    --save_results \
-    --gamma 0.5
+    --num_rounds $NUM_ROUNDS \
+    --num_clients $NUM_CLIENTS \
+    --gamma $GAMMA \
+    --save_results
 
-echo "=== Running Sheaf-FMTL ==="
-python -u -m experiments.run_rotated_mnist \
-    --mode sheaf \
-    --num_rounds 50 \
-    --num_clients 10 \
-    --save_results \
-    --eta 0.1 \
-    --gamma 0.5 \
-    --lambda_reg 0.0002
+for ETA in "${ETA_VALUES[@]}"; do
+    echo "=== Running Sheaf-FMTL with eta=$ETA ==="
+    python -u -m experiments.run_rotated_mnist \
+        --mode sheaf \
+        --num_rounds $NUM_ROUNDS \
+        --num_clients $NUM_CLIENTS \
+        --gamma $GAMMA \
+        --eta $ETA \
+        --lambda_reg 0.0002 \
+        --save_results
+done
 
-echo "=== Both runs complete ==="
-
-# ...existing code...
-echo "=== Both runs complete ==="
-
-python -u -m utils.plot_compare_mode --gamma 0.5   # not actually the right gamma
+echo "=== All runs complete. Plotting... ==="
+python -u -m utils.plot_compare_mode --gamma $GAMMA

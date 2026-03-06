@@ -153,14 +153,18 @@ def main(args):
         'total_communication_mb': cumulative_bits / 1e6,
         'total_time_seconds': cumulative_time
     }
-    
+
     if args.save_results:
-        save_path = f"results/sheaf_fmtl_rmnist_{args.mode}_gamma{args.gamma}.json"
+        if args.mode == 'sheaf':
+            save_path = f"results/sheaf_fmtl_rmnist_sheaf_gamma{args.gamma}_eta{args.eta}.json"
+        else:
+            save_path = f"results/sheaf_fmtl_rmnist_local_gamma{args.gamma}.json"
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         with open(save_path, 'w') as f:
             json.dump(results, f, indent=2)
         print(f"\nResults saved to {save_path}")
-    
+
+
     print(f"\nTraining completed!")
     print(f"Final average test accuracy: {history['test_accuracy'][-1]:.4f}")
     print(f"Total communication: {cumulative_bits/1e6:.2f} MB")
