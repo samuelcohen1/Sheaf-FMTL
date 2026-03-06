@@ -1,0 +1,510 @@
+=== Running independent baseline ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 3, 'avg_degree': 1.5, 'max_degree': 2, 'min_degree': 1, 'diameter': 3, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 44,544
+Round 0 times — local: 4.694s (avg 1.1736s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round   0: Avg Test Accuracy = 0.5442, Bits = 0.04 MB, Time = 4.70s
+Round 1 times — local: 1.041s (avg 0.2602s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 2 times — local: 0.980s (avg 0.2451s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 3 times — local: 1.057s (avg 0.2643s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 4 times — local: 0.969s (avg 0.2422s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 5 times — local: 0.978s (avg 0.2445s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 6 times — local: 1.047s (avg 0.2618s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 7 times — local: 0.971s (avg 0.2428s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 8 times — local: 0.992s (avg 0.2481s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 9 times — local: 1.037s (avg 0.2592s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 10 times — local: 0.987s (avg 0.2467s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  10: Avg Test Accuracy = 0.9028, Bits = 0.49 MB, Time = 14.76s
+Round 11 times — local: 0.969s (avg 0.2422s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 12 times — local: 1.052s (avg 0.2629s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 13 times — local: 0.973s (avg 0.2433s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 14 times — local: 0.970s (avg 0.2425s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 15 times — local: 1.038s (avg 0.2595s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 16 times — local: 0.991s (avg 0.2477s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 17 times — local: 0.984s (avg 0.2460s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 18 times — local: 1.050s (avg 0.2624s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 19 times — local: 0.989s (avg 0.2473s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 20 times — local: 0.978s (avg 0.2444s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  20: Avg Test Accuracy = 0.9288, Bits = 0.94 MB, Time = 24.75s
+Round 21 times — local: 1.043s (avg 0.2608s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 22 times — local: 0.969s (avg 0.2422s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 23 times — local: 1.014s (avg 0.2536s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 24 times — local: 0.973s (avg 0.2431s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 25 times — local: 0.974s (avg 0.2435s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 26 times — local: 1.057s (avg 0.2642s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 27 times — local: 0.972s (avg 0.2431s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 28 times — local: 0.977s (avg 0.2443s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 29 times — local: 1.052s (avg 0.2630s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 30 times — local: 0.978s (avg 0.2445s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  30: Avg Test Accuracy = 0.9457, Bits = 1.38 MB, Time = 34.77s
+Round 31 times — local: 0.968s (avg 0.2421s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 32 times — local: 1.022s (avg 0.2555s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 33 times — local: 0.959s (avg 0.2398s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 34 times — local: 0.977s (avg 0.2442s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 35 times — local: 1.031s (avg 0.2578s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 36 times — local: 0.980s (avg 0.2449s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 37 times — local: 0.973s (avg 0.2433s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 38 times — local: 1.044s (avg 0.2610s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 39 times — local: 0.975s (avg 0.2437s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 40 times — local: 0.988s (avg 0.2470s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  40: Avg Test Accuracy = 0.9546, Bits = 1.83 MB, Time = 44.68s
+Round 41 times — local: 1.027s (avg 0.2567s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 42 times — local: 0.976s (avg 0.2440s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 43 times — local: 1.056s (avg 0.2641s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 44 times — local: 0.973s (avg 0.2433s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 45 times — local: 0.968s (avg 0.2420s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 46 times — local: 1.050s (avg 0.2625s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 47 times — local: 0.984s (avg 0.2460s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 48 times — local: 0.973s (avg 0.2432s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 49 times — local: 1.020s (avg 0.2549s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 50 times — local: 0.982s (avg 0.2455s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  50: Avg Test Accuracy = 0.9604, Bits = 2.27 MB, Time = 54.69s
+Round 51 times — local: 0.976s (avg 0.2439s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 52 times — local: 1.039s (avg 0.2598s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 53 times — local: 0.974s (avg 0.2435s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 54 times — local: 0.984s (avg 0.2459s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 55 times — local: 1.050s (avg 0.2625s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 56 times — local: 0.950s (avg 0.2374s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 57 times — local: 0.963s (avg 0.2408s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 58 times — local: 1.035s (avg 0.2588s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 59 times — local: 0.983s (avg 0.2457s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 60 times — local: 0.973s (avg 0.2434s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  60: Avg Test Accuracy = 0.9657, Bits = 2.72 MB, Time = 64.62s
+Round 61 times — local: 1.029s (avg 0.2573s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 62 times — local: 0.965s (avg 0.2414s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 63 times — local: 1.033s (avg 0.2582s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 64 times — local: 0.960s (avg 0.2400s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 65 times — local: 0.965s (avg 0.2413s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 66 times — local: 1.022s (avg 0.2555s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 67 times — local: 0.975s (avg 0.2437s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 68 times — local: 0.971s (avg 0.2427s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 69 times — local: 1.018s (avg 0.2545s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 70 times — local: 0.978s (avg 0.2445s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  70: Avg Test Accuracy = 0.9672, Bits = 3.16 MB, Time = 74.54s
+Round 71 times — local: 0.977s (avg 0.2443s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 72 times — local: 1.045s (avg 0.2611s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 73 times — local: 0.975s (avg 0.2438s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 74 times — local: 0.980s (avg 0.2451s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 75 times — local: 1.057s (avg 0.2644s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 76 times — local: 0.981s (avg 0.2453s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 77 times — local: 0.981s (avg 0.2453s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 78 times — local: 1.042s (avg 0.2606s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 79 times — local: 0.984s (avg 0.2461s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 80 times — local: 0.967s (avg 0.2417s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  80: Avg Test Accuracy = 0.9720, Bits = 3.61 MB, Time = 84.53s
+Round 81 times — local: 1.061s (avg 0.2652s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 82 times — local: 0.979s (avg 0.2447s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 83 times — local: 1.023s (avg 0.2558s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 84 times — local: 0.956s (avg 0.2390s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 85 times — local: 0.959s (avg 0.2399s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 86 times — local: 1.015s (avg 0.2538s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 87 times — local: 0.966s (avg 0.2416s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 88 times — local: 0.954s (avg 0.2385s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 89 times — local: 1.010s (avg 0.2524s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 90 times — local: 0.961s (avg 0.2404s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  90: Avg Test Accuracy = 0.9723, Bits = 4.05 MB, Time = 94.42s
+Round 91 times — local: 0.972s (avg 0.2430s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 92 times — local: 1.023s (avg 0.2557s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 93 times — local: 0.956s (avg 0.2390s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 94 times — local: 0.962s (avg 0.2404s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 95 times — local: 1.040s (avg 0.2599s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 96 times — local: 0.984s (avg 0.2459s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 97 times — local: 0.974s (avg 0.2435s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 98 times — local: 1.023s (avg 0.2558s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 99 times — local: 0.988s (avg 0.2469s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+
+Results saved to results/sheaf_fmtl_rmnist_local_gamma0.01.json
+
+Training completed!
+Final average test accuracy: 0.9731
+Total communication: 4.45 MB
+Total time: 103.34 seconds
+=== Running Sheaf-FMTL with eta=0.0001 ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 3, 'avg_degree': 1.5, 'max_degree': 2, 'min_degree': 1, 'diameter': 3, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 44,544
+Round 0 times — local: 2.773s (avg 0.6932s) | sheaf: 0.017s (avg 0.0043s) | restriction: 0.001s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.5441, Bits = 0.04 MB, Time = 2.79s
+Round 1 times — local: 1.041s (avg 0.2603s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 2 times — local: 0.978s (avg 0.2445s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 3 times — local: 1.037s (avg 0.2593s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 4 times — local: 0.978s (avg 0.2444s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 5 times — local: 0.959s (avg 0.2398s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 6 times — local: 1.019s (avg 0.2547s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 7 times — local: 0.977s (avg 0.2443s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 8 times — local: 0.987s (avg 0.2468s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 9 times — local: 1.056s (avg 0.2641s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 10 times — local: 0.972s (avg 0.2429s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  10: Avg Test Accuracy = 0.9029, Bits = 0.49 MB, Time = 12.82s
+Round 11 times — local: 0.974s (avg 0.2435s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 12 times — local: 1.058s (avg 0.2644s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 13 times — local: 0.961s (avg 0.2402s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 14 times — local: 0.967s (avg 0.2417s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 15 times — local: 1.049s (avg 0.2621s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 16 times — local: 0.977s (avg 0.2443s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 17 times — local: 0.994s (avg 0.2485s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 18 times — local: 1.050s (avg 0.2624s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 19 times — local: 0.982s (avg 0.2455s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 20 times — local: 1.005s (avg 0.2514s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  20: Avg Test Accuracy = 0.9288, Bits = 0.94 MB, Time = 22.85s
+Round 21 times — local: 1.070s (avg 0.2674s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 22 times — local: 0.994s (avg 0.2485s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 23 times — local: 1.035s (avg 0.2588s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 24 times — local: 0.990s (avg 0.2474s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 25 times — local: 0.982s (avg 0.2456s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 26 times — local: 1.031s (avg 0.2578s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 27 times — local: 1.007s (avg 0.2517s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 28 times — local: 0.989s (avg 0.2473s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 29 times — local: 1.071s (avg 0.2677s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 30 times — local: 1.003s (avg 0.2507s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  30: Avg Test Accuracy = 0.9457, Bits = 1.38 MB, Time = 33.04s
+Round 31 times — local: 0.993s (avg 0.2483s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 32 times — local: 1.066s (avg 0.2664s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 33 times — local: 0.997s (avg 0.2493s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 34 times — local: 0.980s (avg 0.2450s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 35 times — local: 1.044s (avg 0.2610s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 36 times — local: 0.993s (avg 0.2482s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 37 times — local: 1.010s (avg 0.2525s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 38 times — local: 1.051s (avg 0.2627s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 39 times — local: 0.981s (avg 0.2452s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 40 times — local: 0.998s (avg 0.2495s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round  40: Avg Test Accuracy = 0.9546, Bits = 1.83 MB, Time = 43.17s
+Round 41 times — local: 1.056s (avg 0.2641s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 42 times — local: 0.987s (avg 0.2468s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 43 times — local: 1.063s (avg 0.2656s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 44 times — local: 0.988s (avg 0.2469s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 45 times — local: 0.980s (avg 0.2449s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 46 times — local: 1.033s (avg 0.2581s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 47 times — local: 0.974s (avg 0.2435s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 48 times — local: 0.979s (avg 0.2448s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 49 times — local: 1.036s (avg 0.2591s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 50 times — local: 0.996s (avg 0.2490s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  50: Avg Test Accuracy = 0.9604, Bits = 2.27 MB, Time = 53.29s
+Round 51 times — local: 0.972s (avg 0.2429s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 52 times — local: 1.044s (avg 0.2611s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 53 times — local: 0.987s (avg 0.2468s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 54 times — local: 0.984s (avg 0.2460s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 55 times — local: 1.044s (avg 0.2611s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 56 times — local: 0.964s (avg 0.2410s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 57 times — local: 0.976s (avg 0.2439s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 58 times — local: 1.035s (avg 0.2588s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 59 times — local: 0.964s (avg 0.2410s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 60 times — local: 0.979s (avg 0.2447s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  60: Avg Test Accuracy = 0.9657, Bits = 2.72 MB, Time = 63.25s
+Round 61 times — local: 1.049s (avg 0.2622s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 62 times — local: 0.970s (avg 0.2425s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 63 times — local: 1.016s (avg 0.2539s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 64 times — local: 0.972s (avg 0.2431s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 65 times — local: 0.976s (avg 0.2439s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 66 times — local: 1.028s (avg 0.2571s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 67 times — local: 0.996s (avg 0.2490s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 68 times — local: 0.989s (avg 0.2472s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 69 times — local: 1.051s (avg 0.2626s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 70 times — local: 0.980s (avg 0.2450s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  70: Avg Test Accuracy = 0.9672, Bits = 3.16 MB, Time = 73.30s
+Round 71 times — local: 0.983s (avg 0.2458s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 72 times — local: 1.069s (avg 0.2673s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 73 times — local: 0.988s (avg 0.2471s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 74 times — local: 0.979s (avg 0.2447s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 75 times — local: 1.045s (avg 0.2614s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 76 times — local: 0.990s (avg 0.2476s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 77 times — local: 0.976s (avg 0.2440s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 78 times — local: 1.038s (avg 0.2595s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 79 times — local: 0.983s (avg 0.2458s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 80 times — local: 0.962s (avg 0.2405s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0002s)
+Round  80: Avg Test Accuracy = 0.9720, Bits = 3.61 MB, Time = 83.33s
+Round 81 times — local: 1.032s (avg 0.2580s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 82 times — local: 0.973s (avg 0.2432s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 83 times — local: 1.038s (avg 0.2594s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 84 times — local: 0.976s (avg 0.2440s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 85 times — local: 0.968s (avg 0.2421s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 86 times — local: 1.022s (avg 0.2556s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 87 times — local: 0.981s (avg 0.2452s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 88 times — local: 0.975s (avg 0.2436s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 89 times — local: 1.042s (avg 0.2606s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 90 times — local: 0.998s (avg 0.2494s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  90: Avg Test Accuracy = 0.9723, Bits = 4.05 MB, Time = 93.36s
+Round 91 times — local: 0.993s (avg 0.2483s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 92 times — local: 1.048s (avg 0.2620s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 93 times — local: 0.983s (avg 0.2459s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 94 times — local: 0.980s (avg 0.2450s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 95 times — local: 1.051s (avg 0.2626s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 96 times — local: 0.990s (avg 0.2474s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 97 times — local: 0.981s (avg 0.2452s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 98 times — local: 1.063s (avg 0.2657s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 99 times — local: 0.987s (avg 0.2467s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.01_eta0.0001.json
+
+Training completed!
+Final average test accuracy: 0.9731
+Total communication: 4.45 MB
+Total time: 102.45 seconds
+=== Running Sheaf-FMTL with eta=0.001 ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 3, 'avg_degree': 1.5, 'max_degree': 2, 'min_degree': 1, 'diameter': 3, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 44,544
+Round 0 times — local: 2.571s (avg 0.6427s) | sheaf: 0.004s (avg 0.0011s) | restriction: 0.001s (avg 0.0001s)
+Round   0: Avg Test Accuracy = 0.5441, Bits = 0.04 MB, Time = 2.58s
+Round 1 times — local: 1.040s (avg 0.2599s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 2 times — local: 0.955s (avg 0.2387s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 3 times — local: 1.035s (avg 0.2587s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 4 times — local: 0.957s (avg 0.2392s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 5 times — local: 0.952s (avg 0.2379s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 6 times — local: 1.032s (avg 0.2581s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 7 times — local: 0.968s (avg 0.2419s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 8 times — local: 0.958s (avg 0.2395s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 9 times — local: 1.036s (avg 0.2591s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 10 times — local: 0.954s (avg 0.2386s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  10: Avg Test Accuracy = 0.9028, Bits = 0.49 MB, Time = 12.48s
+Round 11 times — local: 0.946s (avg 0.2365s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 12 times — local: 1.009s (avg 0.2524s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.000s (avg 0.0001s)
+Round 13 times — local: 0.971s (avg 0.2429s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 14 times — local: 0.943s (avg 0.2358s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 15 times — local: 1.030s (avg 0.2576s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 16 times — local: 0.949s (avg 0.2372s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 17 times — local: 0.949s (avg 0.2372s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 18 times — local: 1.023s (avg 0.2558s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 19 times — local: 0.953s (avg 0.2382s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 20 times — local: 0.947s (avg 0.2367s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  20: Avg Test Accuracy = 0.9288, Bits = 0.94 MB, Time = 22.22s
+Round 21 times — local: 1.008s (avg 0.2520s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 22 times — local: 0.993s (avg 0.2483s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 23 times — local: 1.018s (avg 0.2546s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 24 times — local: 0.961s (avg 0.2403s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 25 times — local: 0.950s (avg 0.2375s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 26 times — local: 1.034s (avg 0.2585s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 27 times — local: 0.948s (avg 0.2369s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 28 times — local: 0.947s (avg 0.2367s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 29 times — local: 1.005s (avg 0.2513s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 30 times — local: 0.959s (avg 0.2397s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  30: Avg Test Accuracy = 0.9457, Bits = 1.38 MB, Time = 32.06s
+Round 31 times — local: 0.946s (avg 0.2366s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 32 times — local: 1.026s (avg 0.2565s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 33 times — local: 0.944s (avg 0.2360s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 34 times — local: 0.965s (avg 0.2412s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 35 times — local: 1.027s (avg 0.2567s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 36 times — local: 0.951s (avg 0.2378s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 37 times — local: 0.925s (avg 0.2311s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0002s)
+Round 38 times — local: 1.020s (avg 0.2549s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 39 times — local: 0.955s (avg 0.2388s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 40 times — local: 0.947s (avg 0.2368s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  40: Avg Test Accuracy = 0.9546, Bits = 1.83 MB, Time = 41.79s
+Round 41 times — local: 1.006s (avg 0.2514s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 42 times — local: 0.954s (avg 0.2385s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 43 times — local: 1.007s (avg 0.2517s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 44 times — local: 0.957s (avg 0.2392s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 45 times — local: 0.961s (avg 0.2402s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 46 times — local: 1.011s (avg 0.2529s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 47 times — local: 0.956s (avg 0.2390s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 48 times — local: 0.960s (avg 0.2399s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 49 times — local: 1.019s (avg 0.2548s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 50 times — local: 0.948s (avg 0.2371s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  50: Avg Test Accuracy = 0.9604, Bits = 2.27 MB, Time = 51.59s
+Round 51 times — local: 0.957s (avg 0.2392s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 52 times — local: 1.010s (avg 0.2524s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 53 times — local: 0.951s (avg 0.2379s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 54 times — local: 0.949s (avg 0.2372s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 55 times — local: 1.017s (avg 0.2542s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 56 times — local: 0.953s (avg 0.2382s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 57 times — local: 0.950s (avg 0.2375s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 58 times — local: 1.010s (avg 0.2524s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 59 times — local: 0.961s (avg 0.2401s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 60 times — local: 0.949s (avg 0.2373s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  60: Avg Test Accuracy = 0.9657, Bits = 2.72 MB, Time = 61.31s
+Round 61 times — local: 1.020s (avg 0.2551s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 62 times — local: 0.950s (avg 0.2375s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 63 times — local: 1.024s (avg 0.2560s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 64 times — local: 0.957s (avg 0.2392s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 65 times — local: 0.963s (avg 0.2407s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 66 times — local: 1.019s (avg 0.2548s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 67 times — local: 0.960s (avg 0.2400s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 68 times — local: 0.953s (avg 0.2383s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 69 times — local: 1.016s (avg 0.2540s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 70 times — local: 0.952s (avg 0.2381s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  70: Avg Test Accuracy = 0.9672, Bits = 3.16 MB, Time = 71.14s
+Round 71 times — local: 0.958s (avg 0.2396s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 72 times — local: 1.017s (avg 0.2543s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 73 times — local: 0.951s (avg 0.2379s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 74 times — local: 0.953s (avg 0.2383s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 75 times — local: 1.026s (avg 0.2566s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 76 times — local: 0.953s (avg 0.2382s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 77 times — local: 0.947s (avg 0.2368s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 78 times — local: 1.018s (avg 0.2544s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 79 times — local: 0.964s (avg 0.2409s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 80 times — local: 0.958s (avg 0.2395s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  80: Avg Test Accuracy = 0.9720, Bits = 3.61 MB, Time = 80.91s
+Round 81 times — local: 1.006s (avg 0.2516s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 82 times — local: 0.958s (avg 0.2394s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 83 times — local: 1.021s (avg 0.2552s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 84 times — local: 0.952s (avg 0.2381s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 85 times — local: 0.948s (avg 0.2370s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 86 times — local: 0.993s (avg 0.2483s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 87 times — local: 0.960s (avg 0.2401s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 88 times — local: 0.960s (avg 0.2400s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 89 times — local: 1.023s (avg 0.2557s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 90 times — local: 0.948s (avg 0.2370s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  90: Avg Test Accuracy = 0.9723, Bits = 4.05 MB, Time = 90.70s
+Round 91 times — local: 0.946s (avg 0.2366s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 92 times — local: 1.020s (avg 0.2549s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 93 times — local: 0.947s (avg 0.2368s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 94 times — local: 0.946s (avg 0.2364s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 95 times — local: 0.996s (avg 0.2491s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 96 times — local: 0.951s (avg 0.2378s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 97 times — local: 0.946s (avg 0.2365s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 98 times — local: 1.007s (avg 0.2517s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 99 times — local: 0.945s (avg 0.2362s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.000s (avg 0.0001s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.01_eta0.001.json
+
+Training completed!
+Final average test accuracy: 0.9731
+Total communication: 4.45 MB
+Total time: 99.42 seconds
+=== Running Sheaf-FMTL with eta=0.01 ===
+Preparing Rotated MNIST dataset...
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 3, 'avg_degree': 1.5, 'max_degree': 2, 'min_degree': 1, 'diameter': 3, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 44,544
+Round 0 times — local: 2.662s (avg 0.6656s) | sheaf: 0.005s (avg 0.0012s) | restriction: 0.001s (avg 0.0001s)
+Round   0: Avg Test Accuracy = 0.5442, Bits = 0.04 MB, Time = 2.67s
+Round 1 times — local: 1.038s (avg 0.2595s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 2 times — local: 0.978s (avg 0.2445s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 3 times — local: 1.041s (avg 0.2604s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 4 times — local: 0.970s (avg 0.2424s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 5 times — local: 0.953s (avg 0.2382s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 6 times — local: 1.027s (avg 0.2569s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 7 times — local: 0.974s (avg 0.2435s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 8 times — local: 0.955s (avg 0.2389s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 9 times — local: 1.048s (avg 0.2620s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 10 times — local: 0.967s (avg 0.2417s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  10: Avg Test Accuracy = 0.9028, Bits = 0.49 MB, Time = 12.64s
+Round 11 times — local: 0.955s (avg 0.2387s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 12 times — local: 1.029s (avg 0.2574s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 13 times — local: 0.972s (avg 0.2430s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 14 times — local: 0.979s (avg 0.2448s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 15 times — local: 1.041s (avg 0.2602s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 16 times — local: 0.954s (avg 0.2386s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 17 times — local: 0.957s (avg 0.2393s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 18 times — local: 1.036s (avg 0.2589s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 19 times — local: 0.968s (avg 0.2419s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 20 times — local: 0.954s (avg 0.2385s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  20: Avg Test Accuracy = 0.9288, Bits = 0.94 MB, Time = 22.50s
+Round 21 times — local: 1.038s (avg 0.2594s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 22 times — local: 0.968s (avg 0.2419s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0001s)
+Round 23 times — local: 1.021s (avg 0.2553s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 24 times — local: 0.955s (avg 0.2388s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 25 times — local: 0.963s (avg 0.2407s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 26 times — local: 1.014s (avg 0.2534s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 27 times — local: 0.963s (avg 0.2408s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 28 times — local: 0.955s (avg 0.2386s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 29 times — local: 1.042s (avg 0.2604s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 30 times — local: 0.959s (avg 0.2398s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  30: Avg Test Accuracy = 0.9457, Bits = 1.38 MB, Time = 32.40s
+Round 31 times — local: 0.975s (avg 0.2437s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 32 times — local: 1.027s (avg 0.2567s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 33 times — local: 0.954s (avg 0.2386s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 34 times — local: 0.956s (avg 0.2391s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 35 times — local: 1.013s (avg 0.2532s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 36 times — local: 0.952s (avg 0.2380s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 37 times — local: 0.973s (avg 0.2432s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 38 times — local: 1.024s (avg 0.2559s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 39 times — local: 0.959s (avg 0.2398s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 40 times — local: 0.958s (avg 0.2395s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  40: Avg Test Accuracy = 0.9546, Bits = 1.83 MB, Time = 42.21s
+Round 41 times — local: 1.031s (avg 0.2577s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 42 times — local: 0.954s (avg 0.2384s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 43 times — local: 1.027s (avg 0.2567s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 44 times — local: 0.954s (avg 0.2385s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 45 times — local: 0.954s (avg 0.2385s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 46 times — local: 1.012s (avg 0.2529s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 47 times — local: 0.967s (avg 0.2418s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 48 times — local: 0.957s (avg 0.2391s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 49 times — local: 1.012s (avg 0.2529s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 50 times — local: 0.936s (avg 0.2341s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  50: Avg Test Accuracy = 0.9604, Bits = 2.27 MB, Time = 52.03s
+Round 51 times — local: 0.980s (avg 0.2450s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 52 times — local: 1.014s (avg 0.2534s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 53 times — local: 0.950s (avg 0.2374s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 54 times — local: 0.950s (avg 0.2376s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 55 times — local: 1.049s (avg 0.2622s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 56 times — local: 0.955s (avg 0.2388s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 57 times — local: 0.951s (avg 0.2378s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 58 times — local: 1.014s (avg 0.2535s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 59 times — local: 0.971s (avg 0.2428s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 60 times — local: 0.968s (avg 0.2421s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  60: Avg Test Accuracy = 0.9657, Bits = 2.72 MB, Time = 61.85s
+Round 61 times — local: 1.041s (avg 0.2602s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 62 times — local: 0.977s (avg 0.2443s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 63 times — local: 1.039s (avg 0.2598s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 64 times — local: 0.972s (avg 0.2431s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 65 times — local: 0.975s (avg 0.2439s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 66 times — local: 1.022s (avg 0.2555s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 67 times — local: 0.977s (avg 0.2444s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 68 times — local: 0.977s (avg 0.2443s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 69 times — local: 1.053s (avg 0.2633s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 70 times — local: 0.968s (avg 0.2420s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  70: Avg Test Accuracy = 0.9672, Bits = 3.16 MB, Time = 71.87s
+Round 71 times — local: 0.980s (avg 0.2449s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 72 times — local: 1.034s (avg 0.2585s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 73 times — local: 0.971s (avg 0.2428s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 74 times — local: 0.961s (avg 0.2403s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 75 times — local: 1.047s (avg 0.2618s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 76 times — local: 0.982s (avg 0.2454s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 77 times — local: 0.974s (avg 0.2435s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 78 times — local: 1.036s (avg 0.2589s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 79 times — local: 0.971s (avg 0.2427s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 80 times — local: 0.978s (avg 0.2445s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  80: Avg Test Accuracy = 0.9720, Bits = 3.61 MB, Time = 81.83s
+Round 81 times — local: 1.031s (avg 0.2577s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 82 times — local: 0.978s (avg 0.2446s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 83 times — local: 1.033s (avg 0.2582s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 84 times — local: 0.979s (avg 0.2448s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 85 times — local: 0.970s (avg 0.2426s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 86 times — local: 1.022s (avg 0.2555s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 87 times — local: 0.972s (avg 0.2429s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 88 times — local: 0.979s (avg 0.2446s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 89 times — local: 1.023s (avg 0.2559s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 90 times — local: 0.953s (avg 0.2382s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round  90: Avg Test Accuracy = 0.9723, Bits = 4.05 MB, Time = 91.79s
+Round 91 times — local: 0.972s (avg 0.2431s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 92 times — local: 1.043s (avg 0.2608s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 93 times — local: 0.979s (avg 0.2448s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 94 times — local: 0.973s (avg 0.2432s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 95 times — local: 1.028s (avg 0.2571s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 96 times — local: 0.998s (avg 0.2495s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 97 times — local: 0.949s (avg 0.2373s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 98 times — local: 1.036s (avg 0.2590s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+Round 99 times — local: 0.966s (avg 0.2415s) | sheaf: 0.001s (avg 0.0003s) | restriction: 0.001s (avg 0.0001s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.01_eta0.01.json
+
+Training completed!
+Final average test accuracy: 0.9731
+Total communication: 4.45 MB
+Total time: 100.75 seconds
+=== All runs complete. Plotting... ===
+Plot saved to results/eta_sweep_gamma0.01.png
