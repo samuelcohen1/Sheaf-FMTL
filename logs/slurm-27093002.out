@@ -1,0 +1,236 @@
+=== Running independent baseline ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 3.828s (avg 0.9570s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round   0: Avg Test Accuracy = 0.3125, Bits = 0.67 MB, Time = 3.83s
+Round 1 times — local: 0.485s (avg 0.1211s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 2 times — local: 0.539s (avg 0.1347s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 3 times — local: 0.475s (avg 0.1186s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 4 times — local: 0.476s (avg 0.1191s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 5 times — local: 0.463s (avg 0.1156s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 6 times — local: 0.483s (avg 0.1207s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 7 times — local: 0.558s (avg 0.1394s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 8 times — local: 0.473s (avg 0.1181s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 9 times — local: 0.472s (avg 0.1180s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 10 times — local: 0.472s (avg 0.1180s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round  10: Avg Test Accuracy = 0.8633, Bits = 7.35 MB, Time = 8.73s
+Round 11 times — local: 0.474s (avg 0.1185s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 12 times — local: 0.473s (avg 0.1182s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 13 times — local: 0.537s (avg 0.1343s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 14 times — local: 0.462s (avg 0.1155s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 15 times — local: 0.475s (avg 0.1187s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 16 times — local: 0.473s (avg 0.1182s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 17 times — local: 0.497s (avg 0.1242s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 18 times — local: 0.472s (avg 0.1180s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+Round 19 times — local: 0.526s (avg 0.1314s) | sheaf: 0.000s (avg nans) | restriction: 0.000s (avg nans)
+
+Results saved to results/sheaf_fmtl_rmnist_local_gamma0.1.json
+
+Training completed!
+Final average test accuracy: 0.8990
+Total communication: 13.37 MB
+Total time: 13.12 seconds
+=== Running Sheaf-FMTL with eta=0.0001 ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 2.093s (avg 0.5232s) | sheaf: 0.018s (avg 0.0046s) | restriction: 0.002s (avg 0.0005s)
+Round   0: Avg Test Accuracy = 0.3126, Bits = 0.67 MB, Time = 2.11s
+Round 1 times — local: 0.499s (avg 0.1248s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 2 times — local: 0.565s (avg 0.1414s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 3 times — local: 0.491s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 4 times — local: 0.490s (avg 0.1226s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 5 times — local: 0.507s (avg 0.1268s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 6 times — local: 0.484s (avg 0.1210s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 7 times — local: 0.563s (avg 0.1407s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 8 times — local: 0.485s (avg 0.1212s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 9 times — local: 0.490s (avg 0.1225s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 10 times — local: 0.493s (avg 0.1232s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round  10: Avg Test Accuracy = 0.8632, Bits = 7.35 MB, Time = 7.21s
+Round 11 times — local: 0.488s (avg 0.1220s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 12 times — local: 0.473s (avg 0.1183s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 13 times — local: 0.580s (avg 0.1450s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 14 times — local: 0.492s (avg 0.1230s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 15 times — local: 0.501s (avg 0.1253s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 16 times — local: 0.482s (avg 0.1204s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 17 times — local: 0.494s (avg 0.1234s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 18 times — local: 0.495s (avg 0.1238s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 19 times — local: 0.575s (avg 0.1437s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.1_eta0.0001.json
+
+Training completed!
+Final average test accuracy: 0.8990
+Total communication: 13.37 MB
+Total time: 11.81 seconds
+=== Running Sheaf-FMTL with eta=0.1 ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 2.148s (avg 0.5370s) | sheaf: 0.006s (avg 0.0015s) | restriction: 0.001s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.3126, Bits = 0.67 MB, Time = 2.16s
+Round 1 times — local: 0.507s (avg 0.1267s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 2 times — local: 0.571s (avg 0.1428s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 3 times — local: 0.498s (avg 0.1245s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 4 times — local: 0.492s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 5 times — local: 0.514s (avg 0.1285s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 6 times — local: 0.492s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 7 times — local: 0.576s (avg 0.1440s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 8 times — local: 0.491s (avg 0.1227s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 9 times — local: 0.492s (avg 0.1230s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 10 times — local: 0.493s (avg 0.1232s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round  10: Avg Test Accuracy = 0.8632, Bits = 7.35 MB, Time = 7.31s
+Round 11 times — local: 0.489s (avg 0.1223s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 12 times — local: 0.492s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 13 times — local: 0.579s (avg 0.1449s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 14 times — local: 0.499s (avg 0.1247s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 15 times — local: 0.518s (avg 0.1295s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 16 times — local: 0.493s (avg 0.1232s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 17 times — local: 0.494s (avg 0.1235s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 18 times — local: 0.491s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 19 times — local: 0.563s (avg 0.1407s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.1_eta0.1.json
+
+Training completed!
+Final average test accuracy: 0.8990
+Total communication: 13.37 MB
+Total time: 11.95 seconds
+=== Running Sheaf-FMTL with eta=1.0 ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 2.071s (avg 0.5177s) | sheaf: 0.005s (avg 0.0013s) | restriction: 0.001s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.3126, Bits = 0.67 MB, Time = 2.08s
+Round 1 times — local: 0.495s (avg 0.1238s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 2 times — local: 0.565s (avg 0.1413s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 3 times — local: 0.488s (avg 0.1221s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 4 times — local: 0.483s (avg 0.1207s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 5 times — local: 0.512s (avg 0.1280s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 6 times — local: 0.488s (avg 0.1221s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 7 times — local: 0.564s (avg 0.1409s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 8 times — local: 0.480s (avg 0.1199s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 9 times — local: 0.485s (avg 0.1212s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 10 times — local: 0.483s (avg 0.1206s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round  10: Avg Test Accuracy = 0.8632, Bits = 7.35 MB, Time = 7.14s
+Round 11 times — local: 0.484s (avg 0.1211s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 12 times — local: 0.480s (avg 0.1201s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 13 times — local: 0.566s (avg 0.1415s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 14 times — local: 0.489s (avg 0.1223s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 15 times — local: 0.494s (avg 0.1234s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 16 times — local: 0.478s (avg 0.1194s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 17 times — local: 0.480s (avg 0.1200s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 18 times — local: 0.480s (avg 0.1200s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 19 times — local: 0.561s (avg 0.1404s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.1_eta1.0.json
+
+Training completed!
+Final average test accuracy: 0.8990
+Total communication: 13.37 MB
+Total time: 11.68 seconds
+=== Running Sheaf-FMTL with eta=10.0 ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 1.822s (avg 0.4555s) | sheaf: 0.006s (avg 0.0015s) | restriction: 0.001s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.3126, Bits = 0.67 MB, Time = 1.83s
+Round 1 times — local: 0.492s (avg 0.1229s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 2 times — local: 0.566s (avg 0.1416s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 3 times — local: 0.480s (avg 0.1199s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 4 times — local: 0.485s (avg 0.1213s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 5 times — local: 0.495s (avg 0.1238s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 6 times — local: 0.477s (avg 0.1192s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 7 times — local: 0.553s (avg 0.1383s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 8 times — local: 0.483s (avg 0.1208s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 9 times — local: 0.482s (avg 0.1206s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 10 times — local: 0.468s (avg 0.1170s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round  10: Avg Test Accuracy = 0.8632, Bits = 7.35 MB, Time = 6.84s
+Round 11 times — local: 0.481s (avg 0.1201s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 12 times — local: 0.482s (avg 0.1205s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 13 times — local: 0.562s (avg 0.1404s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 14 times — local: 0.486s (avg 0.1215s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 15 times — local: 0.489s (avg 0.1222s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 16 times — local: 0.489s (avg 0.1221s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 17 times — local: 0.482s (avg 0.1206s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 18 times — local: 0.480s (avg 0.1201s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 19 times — local: 0.544s (avg 0.1361s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.1_eta10.0.json
+
+Training completed!
+Final average test accuracy: 0.8990
+Total communication: 13.37 MB
+Total time: 11.35 seconds
+=== Running Sheaf-FMTL with eta=100.0 ===
+Preparing Rotated MNIST dataset...
+Generating complete communication graph...
+Graph statistics: {'num_nodes': 4, 'num_edges': 6, 'avg_degree': 3.0, 'max_degree': 3, 'min_degree': 3, 'diameter': 1, 'avg_clustering': 1.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 20 rounds...
+Communication bits per round: 668,544
+Round 0 times — local: 2.062s (avg 0.5156s) | sheaf: 0.006s (avg 0.0015s) | restriction: 0.001s (avg 0.0003s)
+Round   0: Avg Test Accuracy = 0.3125, Bits = 0.67 MB, Time = 2.07s
+Round 1 times — local: 0.499s (avg 0.1247s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 2 times — local: 0.569s (avg 0.1423s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 3 times — local: 0.482s (avg 0.1205s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 4 times — local: 0.481s (avg 0.1203s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 5 times — local: 0.503s (avg 0.1257s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 6 times — local: 0.473s (avg 0.1183s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 7 times — local: 0.559s (avg 0.1398s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 8 times — local: 0.481s (avg 0.1203s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 9 times — local: 0.481s (avg 0.1203s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 10 times — local: 0.479s (avg 0.1199s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round  10: Avg Test Accuracy = 0.0980, Bits = 7.35 MB, Time = 7.10s
+Round 11 times — local: 0.479s (avg 0.1199s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 12 times — local: 0.480s (avg 0.1200s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 13 times — local: 0.537s (avg 0.1342s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 14 times — local: 0.480s (avg 0.1200s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 15 times — local: 0.473s (avg 0.1184s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 16 times — local: 0.483s (avg 0.1207s) | sheaf: 0.001s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 17 times — local: 0.483s (avg 0.1207s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 18 times — local: 0.482s (avg 0.1205s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+Round 19 times — local: 0.528s (avg 0.1320s) | sheaf: 0.002s (avg 0.0004s) | restriction: 0.001s (avg 0.0002s)
+
+Results saved to results/sheaf_fmtl_rmnist_sheaf_gamma0.1_eta100.0.json
+
+Training completed!
+Final average test accuracy: 0.0980
+Total communication: 13.37 MB
+Total time: 11.55 seconds
+=== All runs complete. Plotting... ===
+Plot saved to results/eta_sweep_gamma0.1.png
