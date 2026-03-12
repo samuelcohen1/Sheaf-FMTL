@@ -14,13 +14,15 @@ source $PWD/venv/bin/activate
 
 GAMMA=0.1
 NUM_ROUNDS=20
-NUM_CLIENTS=4
 ALPHA=0.005
-LAMBDA_REG=0.1
+LAMBDA_REG=0.001
 BATCH_SIZE=256
 LOCAL_EPOCHS=1
 GRAPH_TYPE=complete
-ETA_VALUES=(0.01 0.1 1.0)
+ETA_VALUES=(0.0001 0.01 0.1 0.5 1.0)
+
+
+
 
 echo "=== Running independent baseline ==="
 python -u -m experiments.run_rotated_mnist \
