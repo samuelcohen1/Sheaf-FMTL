@@ -1,0 +1,8 @@
+=== Running independent baseline ===
+=== Running Sheaf-FMTL with eta=0.0001 ===
+=== Running Sheaf-FMTL with eta=0.01 ===
+=== Running Sheaf-FMTL with eta=0.1 ===
+=== Running Sheaf-FMTL with eta=0.5 ===
+=== Running Sheaf-FMTL with eta=1.0 ===
+=== All runs complete. Plotting... ===
+Plot saved to results/eta_sweep_gamma0.1.png
