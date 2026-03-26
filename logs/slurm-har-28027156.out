@@ -1,0 +1,124 @@
+=== Run 1: lambda_reg=0 (baseline, no sheaf coordination) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 51, Test samples = 17
+Client 1: Train samples = 257, Test samples = 86
+Client 2: Train samples = 257, Test samples = 86
+Client 3: Train samples = 257, Test samples = 86
+Client 4: Train samples = 51, Test samples = 17
+Client 5: Train samples = 51, Test samples = 17
+Client 6: Train samples = 257, Test samples = 86
+Client 7: Train samples = 257, Test samples = 86
+Client 8: Train samples = 51, Test samples = 17
+Client 9: Train samples = 51, Test samples = 17
+Client 10: Train samples = 257, Test samples = 86
+Client 11: Train samples = 51, Test samples = 17
+Client 12: Train samples = 51, Test samples = 17
+Client 13: Train samples = 51, Test samples = 17
+Client 14: Train samples = 257, Test samples = 86
+Client 15: Train samples = 51, Test samples = 17
+Client 16: Train samples = 51, Test samples = 17
+Client 17: Train samples = 51, Test samples = 17
+Client 18: Train samples = 257, Test samples = 86
+Client 19: Train samples = 257, Test samples = 86
+Client 20: Train samples = 257, Test samples = 86
+Client 21: Train samples = 257, Test samples = 86
+Client 22: Train samples = 257, Test samples = 86
+Client 23: Train samples = 51, Test samples = 17
+Client 24: Train samples = 51, Test samples = 17
+Client 25: Train samples = 257, Test samples = 86
+Client 26: Train samples = 257, Test samples = 86
+Client 27: Train samples = 51, Test samples = 17
+Client 28: Train samples = 51, Test samples = 17
+Client 29: Train samples = 264, Test samples = 88
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 30}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 30, 'num_edges': 93, 'avg_degree': 6.2, 'max_degree': 9, 'min_degree': 3, 'diameter': 4, 'avg_clustering': 0.19084656084656088, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 1,942,272
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.2301, Bits = 1.94 MB, Time = 3.65s
+Round  10: Avg Test Accuracy = 0.5680, Bits = 21.36 MB, Time = 5.41s
+Round  20: Avg Test Accuracy = 0.6821, Bits = 40.79 MB, Time = 7.17s
+Round  30: Avg Test Accuracy = 0.7522, Bits = 60.21 MB, Time = 8.92s
+Round  40: Avg Test Accuracy = 0.7701, Bits = 79.63 MB, Time = 10.68s
+Round  50: Avg Test Accuracy = 0.8045, Bits = 99.06 MB, Time = 12.41s
+Round  60: Avg Test Accuracy = 0.8222, Bits = 118.48 MB, Time = 14.14s
+Round  70: Avg Test Accuracy = 0.8319, Bits = 137.90 MB, Time = 15.84s
+Round  80: Avg Test Accuracy = 0.8541, Bits = 157.32 MB, Time = 17.58s
+Round  90: Avg Test Accuracy = 0.8654, Bits = 176.75 MB, Time = 19.31s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0.json
+
+Training completed!
+Final average test accuracy: 0.8752
+Total communication: 194.23 MB
+Total time: 20.90 seconds
+=== Run 1 complete ===
+=== Run 2: lambda_reg=0.05 (sheaf-regularized) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 51, Test samples = 17
+Client 1: Train samples = 257, Test samples = 86
+Client 2: Train samples = 257, Test samples = 86
+Client 3: Train samples = 257, Test samples = 86
+Client 4: Train samples = 51, Test samples = 17
+Client 5: Train samples = 51, Test samples = 17
+Client 6: Train samples = 257, Test samples = 86
+Client 7: Train samples = 257, Test samples = 86
+Client 8: Train samples = 51, Test samples = 17
+Client 9: Train samples = 51, Test samples = 17
+Client 10: Train samples = 257, Test samples = 86
+Client 11: Train samples = 51, Test samples = 17
+Client 12: Train samples = 51, Test samples = 17
+Client 13: Train samples = 51, Test samples = 17
+Client 14: Train samples = 257, Test samples = 86
+Client 15: Train samples = 51, Test samples = 17
+Client 16: Train samples = 51, Test samples = 17
+Client 17: Train samples = 51, Test samples = 17
+Client 18: Train samples = 257, Test samples = 86
+Client 19: Train samples = 257, Test samples = 86
+Client 20: Train samples = 257, Test samples = 86
+Client 21: Train samples = 257, Test samples = 86
+Client 22: Train samples = 257, Test samples = 86
+Client 23: Train samples = 51, Test samples = 17
+Client 24: Train samples = 51, Test samples = 17
+Client 25: Train samples = 257, Test samples = 86
+Client 26: Train samples = 257, Test samples = 86
+Client 27: Train samples = 51, Test samples = 17
+Client 28: Train samples = 51, Test samples = 17
+Client 29: Train samples = 264, Test samples = 88
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 30}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 30, 'num_edges': 83, 'avg_degree': 5.533333333333333, 'max_degree': 12, 'min_degree': 1, 'diameter': 4, 'avg_clustering': 0.2295478595478596, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 2,589,696
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.2324, Bits = 2.59 MB, Time = 1.63s
+Round  10: Avg Test Accuracy = 0.5662, Bits = 28.49 MB, Time = 3.35s
+Round  20: Avg Test Accuracy = 0.6928, Bits = 54.38 MB, Time = 5.05s
+Round  30: Avg Test Accuracy = 0.7465, Bits = 80.28 MB, Time = 6.76s
+Round  40: Avg Test Accuracy = 0.7791, Bits = 106.18 MB, Time = 8.45s
+Round  50: Avg Test Accuracy = 0.8144, Bits = 132.07 MB, Time = 10.14s
+Round  60: Avg Test Accuracy = 0.8218, Bits = 157.97 MB, Time = 11.84s
+Round  70: Avg Test Accuracy = 0.8339, Bits = 183.87 MB, Time = 13.55s
+Round  80: Avg Test Accuracy = 0.8534, Bits = 209.77 MB, Time = 15.23s
+Round  90: Avg Test Accuracy = 0.8670, Bits = 235.66 MB, Time = 16.93s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0.json
+
+Training completed!
+Final average test accuracy: 0.8803
+Total communication: 258.97 MB
+Total time: 18.42 seconds
+=== Run 2 complete ===

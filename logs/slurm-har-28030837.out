@@ -1,0 +1,102 @@
+=== Run 1: lambda_reg=0 (baseline, no sheaf coordination) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5711, Bits = 0.22 MB, Time = 2.98s
+Round  10: Avg Test Accuracy = 0.8480, Bits = 2.37 MB, Time = 4.28s
+Round  20: Avg Test Accuracy = 0.9092, Bits = 4.53 MB, Time = 5.54s
+Round  30: Avg Test Accuracy = 0.9306, Bits = 6.69 MB, Time = 6.81s
+Round  40: Avg Test Accuracy = 0.9391, Bits = 8.85 MB, Time = 8.09s
+Round  50: Avg Test Accuracy = 0.9376, Bits = 11.01 MB, Time = 9.37s
+Round  60: Avg Test Accuracy = 0.9418, Bits = 13.16 MB, Time = 10.64s
+Round  70: Avg Test Accuracy = 0.9488, Bits = 15.32 MB, Time = 11.91s
+Round  80: Avg Test Accuracy = 0.9442, Bits = 17.48 MB, Time = 13.19s
+Round  90: Avg Test Accuracy = 0.9535, Bits = 19.64 MB, Time = 14.46s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0.json
+
+Training completed!
+Final average test accuracy: 0.9511
+Total communication: 21.58 MB
+Total time: 15.61 seconds
+=== Run 1 complete ===
+=== Run 2: lambda_reg=20.0 ETA 0 (sheaf-regularized, no restriction map update) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5773, Bits = 0.22 MB, Time = 1.46s
+Round  10: Avg Test Accuracy = 0.8871, Bits = 2.37 MB, Time = 2.78s
+Round  20: Avg Test Accuracy = 0.9112, Bits = 4.53 MB, Time = 4.09s
+Round  30: Avg Test Accuracy = 0.9216, Bits = 6.69 MB, Time = 5.39s
+Round  40: Avg Test Accuracy = 0.9267, Bits = 8.85 MB, Time = 6.69s
+Round  50: Avg Test Accuracy = 0.9329, Bits = 11.01 MB, Time = 8.00s
+Round  60: Avg Test Accuracy = 0.9375, Bits = 13.16 MB, Time = 9.31s
+Round  70: Avg Test Accuracy = 0.9387, Bits = 15.32 MB, Time = 10.60s
+Round  80: Avg Test Accuracy = 0.9430, Bits = 17.48 MB, Time = 11.90s
+Round  90: Avg Test Accuracy = 0.9449, Bits = 19.64 MB, Time = 13.20s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0.json
+
+Training completed!
+Final average test accuracy: 0.9472
+Total communication: 21.58 MB
+Total time: 14.37 seconds
+=== Run 2 complete ===
+=== Run 3: lambda_reg=20.0 eta=0.01 (sheaf-regularized) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5715, Bits = 0.22 MB, Time = 1.33s
+Round  10: Avg Test Accuracy = 0.8530, Bits = 2.37 MB, Time = 2.62s
+Round  20: Avg Test Accuracy = 0.9050, Bits = 4.53 MB, Time = 3.90s
+Round  30: Avg Test Accuracy = 0.9298, Bits = 6.69 MB, Time = 5.18s
+Round  40: Avg Test Accuracy = 0.9306, Bits = 8.85 MB, Time = 6.47s
+Round  50: Avg Test Accuracy = 0.9329, Bits = 11.01 MB, Time = 7.74s
+Round  60: Avg Test Accuracy = 0.9100, Bits = 13.16 MB, Time = 9.02s
+Round  70: Avg Test Accuracy = 0.1773, Bits = 15.32 MB, Time = 10.31s
+Round  80: Avg Test Accuracy = 0.1773, Bits = 17.48 MB, Time = 11.59s
+Round  90: Avg Test Accuracy = 0.1773, Bits = 19.64 MB, Time = 12.87s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0.json
+
+Training completed!
+Final average test accuracy: 0.1773
+Total communication: 21.58 MB
+Total time: 14.02 seconds
+=== Run 3 complete ===

@@ -1,0 +1,189 @@
+=== Run 1: lambda_reg=0 (baseline, no sheaf coordination) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 51, Test samples = 17
+Client 1: Train samples = 257, Test samples = 86
+Client 2: Train samples = 257, Test samples = 86
+Client 3: Train samples = 257, Test samples = 86
+Client 4: Train samples = 51, Test samples = 17
+Client 5: Train samples = 51, Test samples = 17
+Client 6: Train samples = 257, Test samples = 86
+Client 7: Train samples = 257, Test samples = 86
+Client 8: Train samples = 51, Test samples = 17
+Client 9: Train samples = 51, Test samples = 17
+Client 10: Train samples = 257, Test samples = 86
+Client 11: Train samples = 51, Test samples = 17
+Client 12: Train samples = 51, Test samples = 17
+Client 13: Train samples = 51, Test samples = 17
+Client 14: Train samples = 257, Test samples = 86
+Client 15: Train samples = 51, Test samples = 17
+Client 16: Train samples = 51, Test samples = 17
+Client 17: Train samples = 51, Test samples = 17
+Client 18: Train samples = 257, Test samples = 86
+Client 19: Train samples = 257, Test samples = 86
+Client 20: Train samples = 257, Test samples = 86
+Client 21: Train samples = 257, Test samples = 86
+Client 22: Train samples = 257, Test samples = 86
+Client 23: Train samples = 51, Test samples = 17
+Client 24: Train samples = 51, Test samples = 17
+Client 25: Train samples = 257, Test samples = 86
+Client 26: Train samples = 257, Test samples = 86
+Client 27: Train samples = 51, Test samples = 17
+Client 28: Train samples = 51, Test samples = 17
+Client 29: Train samples = 264, Test samples = 88
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 30}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 30, 'num_edges': 88, 'avg_degree': 5.866666666666666, 'max_degree': 10, 'min_degree': 2, 'diameter': 3, 'avg_clustering': 0.20164021164021168, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 2,158,080
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.2301, Bits = 2.16 MB, Time = 3.80s
+Round  10: Avg Test Accuracy = 0.5680, Bits = 23.74 MB, Time = 5.25s
+Round  20: Avg Test Accuracy = 0.6821, Bits = 45.32 MB, Time = 6.68s
+Round  30: Avg Test Accuracy = 0.7522, Bits = 66.90 MB, Time = 8.12s
+Round  40: Avg Test Accuracy = 0.7701, Bits = 88.48 MB, Time = 9.57s
+Round  50: Avg Test Accuracy = 0.8045, Bits = 110.06 MB, Time = 11.00s
+Round  60: Avg Test Accuracy = 0.8222, Bits = 131.64 MB, Time = 12.43s
+Round  70: Avg Test Accuracy = 0.8319, Bits = 153.22 MB, Time = 13.87s
+Round  80: Avg Test Accuracy = 0.8541, Bits = 174.80 MB, Time = 15.24s
+Round  90: Avg Test Accuracy = 0.8654, Bits = 196.39 MB, Time = 16.41s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01.json
+
+Training completed!
+Final average test accuracy: 0.8752
+Total communication: 215.81 MB
+Total time: 17.46 seconds
+=== Run 1 complete ===
+=== Run 2: lambda_reg=20.0 ETA 0 (sheaf-regularized, no restriction map update) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 51, Test samples = 17
+Client 1: Train samples = 257, Test samples = 86
+Client 2: Train samples = 257, Test samples = 86
+Client 3: Train samples = 257, Test samples = 86
+Client 4: Train samples = 51, Test samples = 17
+Client 5: Train samples = 51, Test samples = 17
+Client 6: Train samples = 257, Test samples = 86
+Client 7: Train samples = 257, Test samples = 86
+Client 8: Train samples = 51, Test samples = 17
+Client 9: Train samples = 51, Test samples = 17
+Client 10: Train samples = 257, Test samples = 86
+Client 11: Train samples = 51, Test samples = 17
+Client 12: Train samples = 51, Test samples = 17
+Client 13: Train samples = 51, Test samples = 17
+Client 14: Train samples = 257, Test samples = 86
+Client 15: Train samples = 51, Test samples = 17
+Client 16: Train samples = 51, Test samples = 17
+Client 17: Train samples = 51, Test samples = 17
+Client 18: Train samples = 257, Test samples = 86
+Client 19: Train samples = 257, Test samples = 86
+Client 20: Train samples = 257, Test samples = 86
+Client 21: Train samples = 257, Test samples = 86
+Client 22: Train samples = 257, Test samples = 86
+Client 23: Train samples = 51, Test samples = 17
+Client 24: Train samples = 51, Test samples = 17
+Client 25: Train samples = 257, Test samples = 86
+Client 26: Train samples = 257, Test samples = 86
+Client 27: Train samples = 51, Test samples = 17
+Client 28: Train samples = 51, Test samples = 17
+Client 29: Train samples = 264, Test samples = 88
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 30}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 30, 'num_edges': 90, 'avg_degree': 6.0, 'max_degree': 10, 'min_degree': 2, 'diameter': 4, 'avg_clustering': 0.2638095238095239, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 2,158,080
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.1691, Bits = 2.16 MB, Time = 1.41s
+Round  10: Avg Test Accuracy = 0.5140, Bits = 23.74 MB, Time = 2.87s
+Round  20: Avg Test Accuracy = 0.6140, Bits = 45.32 MB, Time = 4.34s
+Round  30: Avg Test Accuracy = 0.7161, Bits = 66.90 MB, Time = 5.77s
+Round  40: Avg Test Accuracy = 0.7277, Bits = 88.48 MB, Time = 7.18s
+Round  50: Avg Test Accuracy = 0.7842, Bits = 110.06 MB, Time = 8.61s
+Round  60: Avg Test Accuracy = 0.7938, Bits = 131.64 MB, Time = 10.04s
+Round  70: Avg Test Accuracy = 0.8051, Bits = 153.22 MB, Time = 11.43s
+Round  80: Avg Test Accuracy = 0.8191, Bits = 174.80 MB, Time = 12.58s
+Round  90: Avg Test Accuracy = 0.8366, Bits = 196.39 MB, Time = 13.73s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0.json
+
+Training completed!
+Final average test accuracy: 0.8409
+Total communication: 215.81 MB
+Total time: 14.77 seconds
+=== Run 2 complete ===
+=== Run 3: lambda_reg=20.0 eta=0.01 (sheaf-regularized) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 51, Test samples = 17
+Client 1: Train samples = 257, Test samples = 86
+Client 2: Train samples = 257, Test samples = 86
+Client 3: Train samples = 257, Test samples = 86
+Client 4: Train samples = 51, Test samples = 17
+Client 5: Train samples = 51, Test samples = 17
+Client 6: Train samples = 257, Test samples = 86
+Client 7: Train samples = 257, Test samples = 86
+Client 8: Train samples = 51, Test samples = 17
+Client 9: Train samples = 51, Test samples = 17
+Client 10: Train samples = 257, Test samples = 86
+Client 11: Train samples = 51, Test samples = 17
+Client 12: Train samples = 51, Test samples = 17
+Client 13: Train samples = 51, Test samples = 17
+Client 14: Train samples = 257, Test samples = 86
+Client 15: Train samples = 51, Test samples = 17
+Client 16: Train samples = 51, Test samples = 17
+Client 17: Train samples = 51, Test samples = 17
+Client 18: Train samples = 257, Test samples = 86
+Client 19: Train samples = 257, Test samples = 86
+Client 20: Train samples = 257, Test samples = 86
+Client 21: Train samples = 257, Test samples = 86
+Client 22: Train samples = 257, Test samples = 86
+Client 23: Train samples = 51, Test samples = 17
+Client 24: Train samples = 51, Test samples = 17
+Client 25: Train samples = 257, Test samples = 86
+Client 26: Train samples = 257, Test samples = 86
+Client 27: Train samples = 51, Test samples = 17
+Client 28: Train samples = 51, Test samples = 17
+Client 29: Train samples = 264, Test samples = 88
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 30}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 30, 'num_edges': 73, 'avg_degree': 4.866666666666666, 'max_degree': 9, 'min_degree': 1, 'diameter': 4, 'avg_clustering': 0.14367724867724868, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 100 rounds...
+Communication bits per round: 1,942,272
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.2023, Bits = 1.94 MB, Time = 1.35s
+Round  10: Avg Test Accuracy = 0.5562, Bits = 21.36 MB, Time = 3.03s
+Round  20: Avg Test Accuracy = 0.6538, Bits = 40.79 MB, Time = 4.64s
+Round  30: Avg Test Accuracy = 0.7169, Bits = 60.21 MB, Time = 6.24s
+Round  40: Avg Test Accuracy = 0.7398, Bits = 79.63 MB, Time = 7.87s
+Round  50: Avg Test Accuracy = 0.7643, Bits = 99.06 MB, Time = 9.52s
+Round  60: Avg Test Accuracy = 0.7799, Bits = 118.48 MB, Time = 11.16s
+Round  70: Avg Test Accuracy = 0.7815, Bits = 137.90 MB, Time = 12.28s
+Round  80: Avg Test Accuracy = 0.8072, Bits = 157.32 MB, Time = 13.40s
+Round  90: Avg Test Accuracy = 0.8126, Bits = 176.75 MB, Time = 14.52s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01.json
+
+Training completed!
+Final average test accuracy: 0.8271
+Total communication: 194.23 MB
+Total time: 15.53 seconds
+=== Run 3 complete ===
+=== All runs complete. Plotting... ===
+Warning: results/sheaf_fmtl_har_gamma1.0_lambda0_eta0.0.json not found, skipping.
+Plot saved to results/har_comparison_gamma1.0.png
