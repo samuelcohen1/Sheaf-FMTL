@@ -9,10 +9,11 @@ def load_json(path):
 
 def main(args):
     run_paths = {
-        "Baseline (λ=0)":           f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda0_eta0.0.json",
+        "Baseline (λ=0)":           f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda0.0_eta{args.eta}.json",
         "Sheaf, η=0 (fixed maps)":  f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta0.0.json",
         f"Sheaf, η={args.eta}":     f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json",
     }
+
 
     results_dict = {}
     for label, path in run_paths.items():
