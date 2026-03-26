@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=01:00:00
+#SBATCH --time=00:05:00
 #SBATCH --output=logs/slurm-har-%j.out
 #SBATCH --error=logs/slurm-har-%j.err
 
@@ -89,3 +89,6 @@ python -u -m experiments.run_har \
     --save_results
 
 echo "=== Run 3 complete ==="
+
+echo "=== All runs complete. Plotting... ==="
+python -u -m utils.plot_compare_har --gamma $GAMMA --lambda_reg $LAMBDA_REG --eta $ETA
