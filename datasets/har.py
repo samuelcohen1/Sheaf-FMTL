@@ -100,8 +100,8 @@ class HARDataset:
             client_train_datasets.append(train_dataset)
             client_test_datasets.append(test_dataset)
             
-            # print(f"Client {i}: Train samples = {len(train_dataset)}, "
-            #       f"Test samples = {len(test_dataset)}")
+            print(f"Client {i}: Train samples = {len(train_dataset)}, "
+                  f"Test samples = {len(test_dataset)}")
         
         return client_train_datasets, client_test_datasets
     
