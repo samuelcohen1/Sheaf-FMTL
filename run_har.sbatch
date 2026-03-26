@@ -54,7 +54,7 @@ python -u -m experiments.run_har \
     --num_clients $NUM_CLIENTS \
     --downsample_rate $DOWNSAMPLE_RATE \
     --task_index_path $TASK_INDEX_PATH \
-    --lambda_reg 1.0 \
+    --lambda_reg 100.0 \
     --alpha $ALPHA \
     --eta $ETA \
     --gamma $GAMMA \
