@@ -17,7 +17,9 @@ mkdir -p results
 
 NUM_ROUNDS=100
 NUM_CLIENTS=30
-ALPHA=0.005
+#ALPHA=0.005
+ALPHA=0.0
+LAMBDA_REG=5.0
 BATCH_SIZE=32
 LOCAL_EPOCHS=1
 GAMMA=1.0
@@ -54,7 +56,7 @@ python -u -m experiments.run_har \
     --num_clients $NUM_CLIENTS \
     --downsample_rate $DOWNSAMPLE_RATE \
     --task_index_path $TASK_INDEX_PATH \
-    --lambda_reg 1.0 \
+    --lambda_reg $LAMBDA_REG \
     --alpha $ALPHA \
     --eta $ETA \
     --gamma $GAMMA \
