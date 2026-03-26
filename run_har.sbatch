@@ -20,7 +20,7 @@ NUM_CLIENTS=30
 ALPHA=0.005
 BATCH_SIZE=32
 LOCAL_EPOCHS=1
-GAMMA=0.3
+GAMMA=1.0
 ETA=0.01
 L2_STRENGTH=0.01
 GRAPH_TYPE=erdos_renyi
@@ -54,7 +54,7 @@ python -u -m experiments.run_har \
     --num_clients $NUM_CLIENTS \
     --downsample_rate $DOWNSAMPLE_RATE \
     --task_index_path $TASK_INDEX_PATH \
-    --lambda_reg 100.0 \
+    --lambda_reg 1.0 \
     --alpha $ALPHA \
     --eta $ETA \
     --gamma $GAMMA \
