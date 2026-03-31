@@ -10,9 +10,9 @@ def load_json(path):
 
 def main(args):
     run_paths = {
-        "Baseline (λ=0)":           f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda0.0_eta{args.eta}.json",
-        "Sheaf, η=0 (fixed maps)":  f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta0.0.json",
-        f"Sheaf, η={args.eta}":     f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json",
+        "Baseline (λ=0)":          f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda0.0_eta{args.eta}.json",
+        "Sheaf, η=0 (fixed maps)": f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta0.0.json",
+        f"Sheaf, η={args.eta}":    f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json",
     }
 
     results_dict = {}
@@ -25,45 +25,26 @@ def main(args):
     if not results_dict:
         raise FileNotFoundError("No HAR result files found.")
 
-    # One row per run: avg accuracy + per-client accuracy
-    n_runs = len(results_dict)
-    fig, axes = plt.subplots(n_runs, 2, figsize=(14, 5 * n_runs))
-    if n_runs == 1:
-        axes = [axes]  # ensure 2D indexing
+    # Determine number of clients from first result
+    first_history = next(iter(results_dict.values()))
+    acc_array = np.array(first_history['test_accuracy'])
+    n_clients = acc_array.shape[1]
 
-    for row, (label, history) in enumerate(results_dict.items()):
-        # history['test_accuracy'] is [round][client]
-        acc_array = np.array(history['test_accuracy'])  # shape: (rounds, clients)
-        avg_acc = acc_array.mean(axis=1)
-        rounds = np.arange(len(avg_acc))
-        bits_mb = [b / 1e6 for b in history['communication_bits']]
+    fig, axes = plt.subplots(1, n_clients, figsize=(7 * n_clients, 5))
+    if n_clients == 1:
+        axes = [axes]
 
-        n_clients = acc_array.shape[1]
+    for c in range(n_clients):
+        ax = axes[c]
+        for label, history in results_dict.items():
+            acc_array = np.array(history['test_accuracy'])  # (iterations, clients)
+            iterations = np.arange(len(acc_array))
+            ax.plot(iterations, acc_array[:, c], linewidth=1.5, label=label)
 
-        # --- Left: Accuracy vs Round ---
-        ax = axes[row][0]
-        for c in range(n_clients):
-            ax.plot(rounds, acc_array[:, c], alpha=0.4, linewidth=1,
-                    label=f"Client {c}")
-        ax.plot(rounds, avg_acc, color='black', linewidth=2,
-                linestyle='--', label="Average")
-        ax.set_xlabel("Round")
+        ax.set_xlabel("Iteration")
         ax.set_ylabel("Test Accuracy")
-        ax.set_title(f"{label} — Accuracy vs. Round (γ={args.gamma})")
-        ax.legend(fontsize=7, ncol=2)
-        ax.grid(True)
-
-        # --- Right: Accuracy vs Communication ---
-        ax = axes[row][1]
-        for c in range(n_clients):
-            ax.plot(bits_mb, acc_array[:, c], alpha=0.4, linewidth=1,
-                    label=f"Client {c}")
-        ax.plot(bits_mb, avg_acc, color='black', linewidth=2,
-                linestyle='--', label="Average")
-        ax.set_xlabel("Cumulative Communication (MB)")
-        ax.set_ylabel("Test Accuracy")
-        ax.set_title(f"{label} — Accuracy vs. Communication (γ={args.gamma})")
-        ax.legend(fontsize=7, ncol=2)
+        ax.set_title(f"Client {c} — Accuracy vs. Iteration (γ={args.gamma})")
+        ax.legend(fontsize=9)
         ax.grid(True)
 
     plt.tight_layout()
