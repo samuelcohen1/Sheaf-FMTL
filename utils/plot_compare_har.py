@@ -1,6 +1,7 @@
 import json
 import argparse
 import os
+import numpy as np
 import matplotlib.pyplot as plt
 
 def load_json(path):
@@ -14,7 +15,6 @@ def main(args):
         f"Sheaf, η={args.eta}":     f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json",
     }
 
-
     results_dict = {}
     for label, path in run_paths.items():
         if not os.path.exists(path):
@@ -25,25 +25,46 @@ def main(args):
     if not results_dict:
         raise FileNotFoundError("No HAR result files found.")
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    # One row per run: avg accuracy + per-client accuracy
+    n_runs = len(results_dict)
+    fig, axes = plt.subplots(n_runs, 2, figsize=(14, 5 * n_runs))
+    if n_runs == 1:
+        axes = [axes]  # ensure 2D indexing
 
-    for label, history in results_dict.items():
-        rounds = range(len(history['test_accuracy']))
-        axes[0].plot(rounds, history['test_accuracy'], label=label)
-    axes[0].set_xlabel("Round")
-    axes[0].set_ylabel("Test Accuracy")
-    axes[0].set_title(f"HAR Accuracy vs. Round (γ={args.gamma})")
-    axes[0].legend()
-    axes[0].grid(True)
-
-    for label, history in results_dict.items():
+    for row, (label, history) in enumerate(results_dict.items()):
+        # history['test_accuracy'] is [round][client]
+        acc_array = np.array(history['test_accuracy'])  # shape: (rounds, clients)
+        avg_acc = acc_array.mean(axis=1)
+        rounds = np.arange(len(avg_acc))
         bits_mb = [b / 1e6 for b in history['communication_bits']]
-        axes[1].plot(bits_mb, history['test_accuracy'], label=label)
-    axes[1].set_xlabel("Cumulative Communication (MB)")
-    axes[1].set_ylabel("Test Accuracy")
-    axes[1].set_title(f"HAR Accuracy vs. Communication (γ={args.gamma})")
-    axes[1].legend()
-    axes[1].grid(True)
+
+        n_clients = acc_array.shape[1]
+
+        # --- Left: Accuracy vs Round ---
+        ax = axes[row][0]
+        for c in range(n_clients):
+            ax.plot(rounds, acc_array[:, c], alpha=0.4, linewidth=1,
+                    label=f"Client {c}")
+        ax.plot(rounds, avg_acc, color='black', linewidth=2,
+                linestyle='--', label="Average")
+        ax.set_xlabel("Round")
+        ax.set_ylabel("Test Accuracy")
+        ax.set_title(f"{label} — Accuracy vs. Round (γ={args.gamma})")
+        ax.legend(fontsize=7, ncol=2)
+        ax.grid(True)
+
+        # --- Right: Accuracy vs Communication ---
+        ax = axes[row][1]
+        for c in range(n_clients):
+            ax.plot(bits_mb, acc_array[:, c], alpha=0.4, linewidth=1,
+                    label=f"Client {c}")
+        ax.plot(bits_mb, avg_acc, color='black', linewidth=2,
+                linestyle='--', label="Average")
+        ax.set_xlabel("Cumulative Communication (MB)")
+        ax.set_ylabel("Test Accuracy")
+        ax.set_title(f"{label} — Accuracy vs. Communication (γ={args.gamma})")
+        ax.legend(fontsize=7, ncol=2)
+        ax.grid(True)
 
     plt.tight_layout()
     save_path = f"results/har_comparison_gamma{args.gamma}.png"

@@ -123,7 +123,7 @@ def main(args):
             client_models, client_test_datasets
         )
         
-        history['test_accuracy'].append(avg_accuracy)
+        history['test_accuracy'].append(client_accuracies)
         history['communication_bits'].append(cumulative_bits)
         history['cpu_time'].append(cumulative_time)
         
@@ -135,12 +135,17 @@ def main(args):
                   f"Time = {cumulative_time:.2f}s")
     
     # Save results
+
+    final_client_accuracies = history['test_accuracy'][-1]
+    final_avg_accuracy = float(np.mean(final_client_accuracies))
+
     results = {
         'args': vars(args),
         'dataset_info': data_info,
         'graph_stats': stats,
         'history': history,
-        'final_accuracy': history['test_accuracy'][-1],
+        'final_accuracy': final_avg_accuracy,
+        'final_client_accuracies': final_client_accuracies,
         'total_communication_mb': cumulative_bits / 1e6,
         'total_time_seconds': cumulative_time
     }
@@ -153,7 +158,7 @@ def main(args):
         print(f"\nResults saved to {save_path}")
     
     print(f"\nTraining completed!")
-    print(f"Final average test accuracy: {history['test_accuracy'][-1]:.4f}")
+    print(f"Final average test accuracy: {final_avg_accuracy:.4f}")
     print(f"Total communication: {cumulative_bits/1e6:.2f} MB")
     print(f"Total time: {cumulative_time:.2f} seconds")
     
