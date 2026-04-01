@@ -151,7 +151,7 @@ def main(args):
     }
     
     if args.save_results:
-        save_path = f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json"
+        save_path = f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}_seed{args.seed}.json"
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         with open(save_path, 'w') as f:
             json.dump(results, f, indent=2)

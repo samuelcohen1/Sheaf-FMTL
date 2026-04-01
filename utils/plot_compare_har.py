@@ -9,26 +9,32 @@ def load_json(path):
         return json.load(f)
 
 def main(args):
-    run_paths = {
-        "Baseline (λ=0)":          f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda0.0_eta{args.eta}.json",
-        "Sheaf, η=0 (fixed maps)": f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta0.0.json",
-        f"Sheaf, η={args.eta}":    f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{args.lambda_reg}_eta{args.eta}.json",
+    seeds = [42, 123, 456, 789, 1234]
+
+    run_configs = {
+        "Baseline (λ=0)":          {"lambda": 0.0,             "eta": args.eta},
+        "Sheaf, η=0 (fixed maps)": {"lambda": args.lambda_reg, "eta": 0.0},
+        f"Sheaf, η={args.eta}":    {"lambda": args.lambda_reg, "eta": args.eta},
     }
 
+    # For each config, load all seed files -> shape (n_seeds, n_iterations, n_clients)
     results_dict = {}
-    for label, path in run_paths.items():
-        if not os.path.exists(path):
-            print(f"Warning: {path} not found, skipping.")
-            continue
-        results_dict[label] = load_json(path)['history']
+    for label, cfg in run_configs.items():
+        seed_arrays = []
+        for seed in seeds:
+            path = f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{cfg['lambda']}_eta{cfg['eta']}_seed{seed}.json"
+            if not os.path.exists(path):
+                print(f"Warning: {path} not found, skipping.")
+                continue
+            data = load_json(path)['history']['test_accuracy']
+            seed_arrays.append(np.array(data))  # (n_iterations, n_clients)
+        if seed_arrays:
+            results_dict[label] = np.stack(seed_arrays, axis=0)  # (n_seeds, n_iterations, n_clients)
 
     if not results_dict:
         raise FileNotFoundError("No HAR result files found.")
 
-    # Determine number of clients from first result
-    first_history = next(iter(results_dict.values()))
-    acc_array = np.array(first_history['test_accuracy'])
-    n_clients = acc_array.shape[1]
+    n_clients = next(iter(results_dict.values())).shape[2]
 
     fig, axes = plt.subplots(1, n_clients, figsize=(7 * n_clients, 5))
     if n_clients == 1:
@@ -36,10 +42,16 @@ def main(args):
 
     for c in range(n_clients):
         ax = axes[c]
-        for label, history in results_dict.items():
-            acc_array = np.array(history['test_accuracy'])  # (iterations, clients)
-            iterations = np.arange(len(acc_array))
-            ax.plot(iterations, acc_array[:, c], linewidth=1.5, label=label)
+        for label, arr in results_dict.items():
+            # arr shape: (n_seeds, n_iterations, n_clients)
+            client_arr = arr[:, :, c]               # (n_seeds, n_iterations)
+            mean = client_arr.mean(axis=0)
+            std  = client_arr.std(axis=0)
+            iterations = np.arange(mean.shape[0])
+
+            line, = ax.plot(iterations, mean, linewidth=1.5, label=label)
+            ax.fill_between(iterations, mean - std, mean + std,
+                            alpha=0.2, color=line.get_color())
 
         ax.set_xlabel("Iteration")
         ax.set_ylabel("Test Accuracy")
