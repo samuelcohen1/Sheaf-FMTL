@@ -17,19 +17,27 @@ def main(args):
         f"Sheaf, η={args.eta}":    {"lambda": args.lambda_reg, "eta": args.eta},
     }
 
-    # For each config, load all seed files -> shape (n_seeds, n_iterations, n_clients)
+    # Load standard per-round accuracy: (n_seeds, n_iterations, n_clients)
     results_dict = {}
+    # Load ensemble per-round accuracy: (n_seeds, n_iterations, n_clients)
+    ensemble_dict = {}
+
     for label, cfg in run_configs.items():
         seed_arrays = []
+        ensemble_arrays = []
         for seed in seeds:
             path = f"results/sheaf_fmtl_har_gamma{args.gamma}_lambda{cfg['lambda']}_eta{cfg['eta']}_seed{seed}.json"
             if not os.path.exists(path):
                 print(f"Warning: {path} not found, skipping.")
                 continue
-            data = load_json(path)['history']['test_accuracy']
-            seed_arrays.append(np.array(data))  # (n_iterations, n_clients)
+            data = load_json(path)
+            seed_arrays.append(np.array(data['history']['test_accuracy']))       # (n_iters, n_clients)
+            if 'ensemble_accuracy' in data['history']:
+                ensemble_arrays.append(np.array(data['history']['ensemble_accuracy']))  # (n_iters, n_clients)
         if seed_arrays:
-            results_dict[label] = np.stack(seed_arrays, axis=0)  # (n_seeds, n_iterations, n_clients)
+            results_dict[label] = np.stack(seed_arrays, axis=0)      # (n_seeds, n_iters, n_clients)
+        if ensemble_arrays:
+            ensemble_dict[label] = np.stack(ensemble_arrays, axis=0) # (n_seeds, n_iters, n_clients)
 
     if not results_dict:
         raise FileNotFoundError("No HAR result files found.")
@@ -42,9 +50,11 @@ def main(args):
 
     for c in range(n_clients):
         ax = axes[c]
+        color_map = {}  # label -> color, so ensemble curve reuses same color
+
+        # Plot standard accuracy curves
         for label, arr in results_dict.items():
-            # arr shape: (n_seeds, n_iterations, n_clients)
-            client_arr = arr[:, :, c]               # (n_seeds, n_iterations)
+            client_arr = arr[:, :, c]           # (n_seeds, n_iters)
             mean = client_arr.mean(axis=0)
             std  = client_arr.std(axis=0)
             iterations = np.arange(mean.shape[0])
@@ -52,6 +62,20 @@ def main(args):
             line, = ax.plot(iterations, mean, linewidth=1.5, label=label)
             ax.fill_between(iterations, mean - std, mean + std,
                             alpha=0.2, color=line.get_color())
+            color_map[label] = line.get_color()
+
+        # Plot ensemble accuracy curves (dashed, same color per config)
+        for label, arr in ensemble_dict.items():
+            client_arr = arr[:, :, c]           # (n_seeds, n_iters)
+            mean = client_arr.mean(axis=0)
+            std  = client_arr.std(axis=0)
+            iterations = np.arange(mean.shape[0])
+            color = color_map.get(label)
+
+            ax.plot(iterations, mean, linewidth=1.5, linestyle='--',
+                    color=color, label=f"{label} + Ensemble")
+            ax.fill_between(iterations, mean - std, mean + std,
+                            alpha=0.1, color=color)
 
         ax.set_xlabel("Iteration")
         ax.set_ylabel("Test Accuracy")

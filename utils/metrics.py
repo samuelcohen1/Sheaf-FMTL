@@ -45,3 +45,48 @@ def calculate_communication_bits(graph, factor, num_params, bits_per_param=32):
 def count_model_parameters(model):
     """Count the number of parameters in a model"""
     return sum(param.numel() for param in model.parameters())
+
+def evaluate_ensemble_clients(client_models, client_test_datasets, graph):
+    """
+    For each client c, ensemble predictions by averaging softmax outputs
+    from client c and its graph neighbors (equal weights).
+    """
+    import torch
+    import torch.nn.functional as F
+    from torch.utils.data import DataLoader
+
+    device = next(client_models[0].parameters()).device
+    client_accuracies = []
+
+    for c in range(len(client_models)):
+        neighbors = list(graph.neighbors(c))
+        all_nodes = [c] + neighbors
+
+        loader = DataLoader(client_test_datasets[c], batch_size=64, shuffle=False)
+        correct = 0
+        total = 0
+        num_classes = None
+
+        for X, y in loader:
+            X, y = X.to(device), y.to(device)
+
+            if num_classes is None:
+                with torch.no_grad():
+                    sample_logits = client_models[c](X)
+                num_classes = sample_logits.shape[1]
+
+            ensemble_probs = torch.zeros(X.size(0), num_classes, device=device)
+            for v in all_nodes:
+                with torch.no_grad():
+                    logits = client_models[v](X)
+                    probs = F.softmax(logits, dim=1)
+                ensemble_probs += probs
+            ensemble_probs /= len(all_nodes)
+
+            preds = ensemble_probs.argmax(dim=1)
+            correct += (preds == y).sum().item()
+            total += y.size(0)
+
+        client_accuracies.append(correct / total)
+
+    return float(np.mean(client_accuracies)), client_accuracies
