@@ -1,0 +1,482 @@
+=== Seed 42: Run 1: lambda_reg=0 (baseline) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5711, Ensemble Accuracy = 0.6311, Bits = 0.22 MB, Time = 4.13s
+Round  10: Avg Test Accuracy = 0.8627, Ensemble Accuracy = 0.8891, Bits = 2.37 MB, Time = 5.41s
+Round  20: Avg Test Accuracy = 0.8972, Ensemble Accuracy = 0.9073, Bits = 4.53 MB, Time = 6.69s
+Round  30: Avg Test Accuracy = 0.9317, Ensemble Accuracy = 0.9216, Bits = 6.69 MB, Time = 7.96s
+Round  40: Avg Test Accuracy = 0.9321, Ensemble Accuracy = 0.9240, Bits = 8.85 MB, Time = 9.24s
+Round  50: Avg Test Accuracy = 0.9410, Ensemble Accuracy = 0.9251, Bits = 11.01 MB, Time = 10.51s
+Round  60: Avg Test Accuracy = 0.9360, Ensemble Accuracy = 0.9329, Bits = 13.16 MB, Time = 11.82s
+Round  70: Avg Test Accuracy = 0.9422, Ensemble Accuracy = 0.9364, Bits = 15.32 MB, Time = 13.12s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01_seed42.json
+
+Training completed!
+Final average test accuracy: 0.9496
+Final ensemble accuracy:     0.9379
+Total communication: 17.26 MB
+Total time: 14.02 seconds
+=== Seed 42: Run 2: lambda_reg=20.0 eta=0 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5773, Ensemble Accuracy = 0.6307, Bits = 0.22 MB, Time = 1.56s
+Round  10: Avg Test Accuracy = 0.8887, Ensemble Accuracy = 0.8918, Bits = 2.37 MB, Time = 2.84s
+Round  20: Avg Test Accuracy = 0.9092, Ensemble Accuracy = 0.9065, Bits = 4.53 MB, Time = 4.14s
+Round  30: Avg Test Accuracy = 0.9220, Ensemble Accuracy = 0.9174, Bits = 6.69 MB, Time = 5.42s
+Round  40: Avg Test Accuracy = 0.9298, Ensemble Accuracy = 0.9212, Bits = 8.85 MB, Time = 6.71s
+Round  50: Avg Test Accuracy = 0.9302, Ensemble Accuracy = 0.9282, Bits = 11.01 MB, Time = 7.97s
+Round  60: Avg Test Accuracy = 0.9344, Ensemble Accuracy = 0.9325, Bits = 13.16 MB, Time = 9.26s
+Round  70: Avg Test Accuracy = 0.9368, Ensemble Accuracy = 0.9356, Bits = 15.32 MB, Time = 10.54s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0_seed42.json
+
+Training completed!
+Final average test accuracy: 0.9426
+Final ensemble accuracy:     0.9406
+Total communication: 17.26 MB
+Total time: 11.70 seconds
+=== Seed 42: Run 3: lambda_reg=20.0 eta=0.01 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5715, Ensemble Accuracy = 0.6288, Bits = 0.22 MB, Time = 1.39s
+Round  10: Avg Test Accuracy = 0.8743, Ensemble Accuracy = 0.8906, Bits = 2.37 MB, Time = 2.68s
+Round  20: Avg Test Accuracy = 0.9007, Ensemble Accuracy = 0.9077, Bits = 4.53 MB, Time = 3.98s
+Round  30: Avg Test Accuracy = 0.9205, Ensemble Accuracy = 0.9158, Bits = 6.69 MB, Time = 5.27s
+Round  40: Avg Test Accuracy = 0.9259, Ensemble Accuracy = 0.9193, Bits = 8.85 MB, Time = 6.57s
+Round  50: Avg Test Accuracy = 0.9341, Ensemble Accuracy = 0.9236, Bits = 11.01 MB, Time = 7.85s
+Round  60: Avg Test Accuracy = 0.9283, Ensemble Accuracy = 0.9178, Bits = 13.16 MB, Time = 9.15s
+Round  70: Avg Test Accuracy = 0.1773, Ensemble Accuracy = 0.1773, Bits = 15.32 MB, Time = 10.43s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01_seed42.json
+
+Training completed!
+Final average test accuracy: 0.1773
+Final ensemble accuracy:     0.1773
+Total communication: 17.26 MB
+Total time: 11.58 seconds
+=== Seed 123: Run 1: lambda_reg=0 (baseline) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5625, Ensemble Accuracy = 0.6447, Bits = 0.22 MB, Time = 1.49s
+Round  10: Avg Test Accuracy = 0.8290, Ensemble Accuracy = 0.8871, Bits = 2.37 MB, Time = 2.79s
+Round  20: Avg Test Accuracy = 0.8833, Ensemble Accuracy = 0.8906, Bits = 4.53 MB, Time = 4.10s
+Round  30: Avg Test Accuracy = 0.9209, Ensemble Accuracy = 0.9209, Bits = 6.69 MB, Time = 5.42s
+Round  40: Avg Test Accuracy = 0.9209, Ensemble Accuracy = 0.9224, Bits = 8.85 MB, Time = 6.73s
+Round  50: Avg Test Accuracy = 0.9329, Ensemble Accuracy = 0.9290, Bits = 11.01 MB, Time = 8.03s
+Round  60: Avg Test Accuracy = 0.9449, Ensemble Accuracy = 0.9313, Bits = 13.16 MB, Time = 9.34s
+Round  70: Avg Test Accuracy = 0.9399, Ensemble Accuracy = 0.9310, Bits = 15.32 MB, Time = 10.62s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01_seed123.json
+
+Training completed!
+Final average test accuracy: 0.9418
+Final ensemble accuracy:     0.9341
+Total communication: 17.26 MB
+Total time: 11.80 seconds
+=== Seed 123: Run 2: lambda_reg=20.0 eta=0 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5924, Ensemble Accuracy = 0.6462, Bits = 0.22 MB, Time = 1.21s
+Round  10: Avg Test Accuracy = 0.8592, Ensemble Accuracy = 0.8871, Bits = 2.37 MB, Time = 2.51s
+Round  20: Avg Test Accuracy = 0.8945, Ensemble Accuracy = 0.8922, Bits = 4.53 MB, Time = 3.82s
+Round  30: Avg Test Accuracy = 0.9185, Ensemble Accuracy = 0.9193, Bits = 6.69 MB, Time = 5.07s
+Round  40: Avg Test Accuracy = 0.9185, Ensemble Accuracy = 0.9213, Bits = 8.85 MB, Time = 6.37s
+Round  50: Avg Test Accuracy = 0.9344, Ensemble Accuracy = 0.9271, Bits = 11.01 MB, Time = 7.67s
+Round  60: Avg Test Accuracy = 0.9426, Ensemble Accuracy = 0.9329, Bits = 13.16 MB, Time = 8.96s
+Round  70: Avg Test Accuracy = 0.9391, Ensemble Accuracy = 0.9317, Bits = 15.32 MB, Time = 10.22s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0_seed123.json
+
+Training completed!
+Final average test accuracy: 0.9407
+Final ensemble accuracy:     0.9352
+Total communication: 17.26 MB
+Total time: 11.36 seconds
+=== Seed 123: Run 3: lambda_reg=20.0 eta=0.01 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 3861, Test samples = 1288
+Client 1: Train samples = 772, Test samples = 258
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5885, Ensemble Accuracy = 0.6455, Bits = 0.22 MB, Time = 1.44s
+Round  10: Avg Test Accuracy = 0.8267, Ensemble Accuracy = 0.8836, Bits = 2.37 MB, Time = 2.72s
+Round  20: Avg Test Accuracy = 0.8802, Ensemble Accuracy = 0.8860, Bits = 4.53 MB, Time = 4.02s
+Round  30: Avg Test Accuracy = 0.9151, Ensemble Accuracy = 0.9197, Bits = 6.69 MB, Time = 5.31s
+Round  40: Avg Test Accuracy = 0.9182, Ensemble Accuracy = 0.9162, Bits = 8.85 MB, Time = 6.61s
+Round  50: Avg Test Accuracy = 0.9248, Ensemble Accuracy = 0.9251, Bits = 11.01 MB, Time = 7.90s
+Round  60: Avg Test Accuracy = 0.4729, Ensemble Accuracy = 0.4402, Bits = 13.16 MB, Time = 9.19s
+Round  70: Avg Test Accuracy = 0.1598, Ensemble Accuracy = 0.1598, Bits = 15.32 MB, Time = 10.48s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01_seed123.json
+
+Training completed!
+Final average test accuracy: 0.1598
+Final ensemble accuracy:     0.1598
+Total communication: 17.26 MB
+Total time: 11.60 seconds
+=== Seed 456: Run 1: lambda_reg=0 (baseline) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.6549, Ensemble Accuracy = 0.6769, Bits = 0.22 MB, Time = 1.21s
+Round  10: Avg Test Accuracy = 0.8092, Ensemble Accuracy = 0.8340, Bits = 2.37 MB, Time = 2.51s
+Round  20: Avg Test Accuracy = 0.8910, Ensemble Accuracy = 0.9034, Bits = 4.53 MB, Time = 3.79s
+Round  30: Avg Test Accuracy = 0.8701, Ensemble Accuracy = 0.8910, Bits = 6.69 MB, Time = 4.82s
+Round  40: Avg Test Accuracy = 0.9054, Ensemble Accuracy = 0.9116, Bits = 8.85 MB, Time = 6.11s
+Round  50: Avg Test Accuracy = 0.9244, Ensemble Accuracy = 0.9131, Bits = 11.01 MB, Time = 7.41s
+Round  60: Avg Test Accuracy = 0.9120, Ensemble Accuracy = 0.9065, Bits = 13.16 MB, Time = 8.71s
+Round  70: Avg Test Accuracy = 0.9217, Ensemble Accuracy = 0.9174, Bits = 15.32 MB, Time = 10.01s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01_seed456.json
+
+Training completed!
+Final average test accuracy: 0.9201
+Final ensemble accuracy:     0.9209
+Total communication: 17.26 MB
+Total time: 11.15 seconds
+=== Seed 456: Run 2: lambda_reg=20.0 eta=0 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.6250, Ensemble Accuracy = 0.6466, Bits = 0.22 MB, Time = 1.24s
+Round  10: Avg Test Accuracy = 0.8123, Ensemble Accuracy = 0.8324, Bits = 2.37 MB, Time = 2.54s
+Round  20: Avg Test Accuracy = 0.9065, Ensemble Accuracy = 0.9046, Bits = 4.53 MB, Time = 3.83s
+Round  30: Avg Test Accuracy = 0.8899, Ensemble Accuracy = 0.8903, Bits = 6.69 MB, Time = 5.14s
+Round  40: Avg Test Accuracy = 0.9019, Ensemble Accuracy = 0.9050, Bits = 8.85 MB, Time = 6.16s
+Round  50: Avg Test Accuracy = 0.9205, Ensemble Accuracy = 0.9073, Bits = 11.01 MB, Time = 7.45s
+Round  60: Avg Test Accuracy = 0.9089, Ensemble Accuracy = 0.9116, Bits = 13.16 MB, Time = 8.71s
+Round  70: Avg Test Accuracy = 0.9174, Ensemble Accuracy = 0.9221, Bits = 15.32 MB, Time = 9.99s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0_seed456.json
+
+Training completed!
+Final average test accuracy: 0.9248
+Final ensemble accuracy:     0.9248
+Total communication: 17.26 MB
+Total time: 11.16 seconds
+=== Seed 456: Run 3: lambda_reg=20.0 eta=0.01 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.6246, Ensemble Accuracy = 0.6455, Bits = 0.22 MB, Time = 1.42s
+Round  10: Avg Test Accuracy = 0.8069, Ensemble Accuracy = 0.8414, Bits = 2.37 MB, Time = 2.69s
+Round  20: Avg Test Accuracy = 0.8852, Ensemble Accuracy = 0.9019, Bits = 4.53 MB, Time = 3.99s
+Round  30: Avg Test Accuracy = 0.8612, Ensemble Accuracy = 0.8821, Bits = 6.69 MB, Time = 5.27s
+Round  40: Avg Test Accuracy = 0.9046, Ensemble Accuracy = 0.9069, Bits = 8.85 MB, Time = 6.53s
+Round  50: Avg Test Accuracy = 0.9143, Ensemble Accuracy = 0.9112, Bits = 11.01 MB, Time = 7.82s
+Round  60: Avg Test Accuracy = 0.4438, Ensemble Accuracy = 0.3681, Bits = 13.16 MB, Time = 9.12s
+Round  70: Avg Test Accuracy = 0.1583, Ensemble Accuracy = 0.1583, Bits = 15.32 MB, Time = 10.13s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01_seed456.json
+
+Training completed!
+Final average test accuracy: 0.1583
+Final ensemble accuracy:     0.1583
+Total communication: 17.26 MB
+Total time: 11.28 seconds
+=== Seed 789: Run 1: lambda_reg=0 (baseline) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.4990, Ensemble Accuracy = 0.5400, Bits = 0.22 MB, Time = 1.11s
+Round  10: Avg Test Accuracy = 0.8996, Ensemble Accuracy = 0.8984, Bits = 2.37 MB, Time = 2.42s
+Round  20: Avg Test Accuracy = 0.8658, Ensemble Accuracy = 0.8953, Bits = 4.53 MB, Time = 3.75s
+Round  30: Avg Test Accuracy = 0.9221, Ensemble Accuracy = 0.9151, Bits = 6.69 MB, Time = 5.05s
+Round  40: Avg Test Accuracy = 0.9364, Ensemble Accuracy = 0.9352, Bits = 8.85 MB, Time = 6.35s
+Round  50: Avg Test Accuracy = 0.9360, Ensemble Accuracy = 0.9364, Bits = 11.01 MB, Time = 7.66s
+Round  60: Avg Test Accuracy = 0.9325, Ensemble Accuracy = 0.9325, Bits = 13.16 MB, Time = 8.99s
+Round  70: Avg Test Accuracy = 0.9341, Ensemble Accuracy = 0.9403, Bits = 15.32 MB, Time = 10.31s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01_seed789.json
+
+Training completed!
+Final average test accuracy: 0.9449
+Final ensemble accuracy:     0.9445
+Total communication: 17.26 MB
+Total time: 11.49 seconds
+=== Seed 789: Run 2: lambda_reg=20.0 eta=0 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.4901, Ensemble Accuracy = 0.5369, Bits = 0.22 MB, Time = 1.23s
+Round  10: Avg Test Accuracy = 0.9057, Ensemble Accuracy = 0.8972, Bits = 2.37 MB, Time = 2.55s
+Round  20: Avg Test Accuracy = 0.8903, Ensemble Accuracy = 0.8995, Bits = 4.53 MB, Time = 3.82s
+Round  30: Avg Test Accuracy = 0.9244, Ensemble Accuracy = 0.9228, Bits = 6.69 MB, Time = 5.12s
+Round  40: Avg Test Accuracy = 0.9344, Ensemble Accuracy = 0.9333, Bits = 8.85 MB, Time = 6.40s
+Round  50: Avg Test Accuracy = 0.9356, Ensemble Accuracy = 0.9352, Bits = 11.01 MB, Time = 7.69s
+Round  60: Avg Test Accuracy = 0.9434, Ensemble Accuracy = 0.9395, Bits = 13.16 MB, Time = 8.99s
+Round  70: Avg Test Accuracy = 0.9430, Ensemble Accuracy = 0.9430, Bits = 15.32 MB, Time = 10.27s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0_seed789.json
+
+Training completed!
+Final average test accuracy: 0.9418
+Final ensemble accuracy:     0.9438
+Total communication: 17.26 MB
+Total time: 11.43 seconds
+=== Seed 789: Run 3: lambda_reg=20.0 eta=0.01 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.4936, Ensemble Accuracy = 0.5431, Bits = 0.22 MB, Time = 1.26s
+Round  10: Avg Test Accuracy = 0.8961, Ensemble Accuracy = 0.8968, Bits = 2.37 MB, Time = 2.59s
+Round  20: Avg Test Accuracy = 0.8666, Ensemble Accuracy = 0.9030, Bits = 4.53 MB, Time = 3.87s
+Round  30: Avg Test Accuracy = 0.9174, Ensemble Accuracy = 0.9135, Bits = 6.69 MB, Time = 5.20s
+Round  40: Avg Test Accuracy = 0.9306, Ensemble Accuracy = 0.9329, Bits = 8.85 MB, Time = 6.51s
+Round  50: Avg Test Accuracy = 0.9302, Ensemble Accuracy = 0.9313, Bits = 11.01 MB, Time = 7.79s
+Round  60: Avg Test Accuracy = 0.7878, Ensemble Accuracy = 0.8735, Bits = 13.16 MB, Time = 9.11s
+Round  70: Avg Test Accuracy = 0.1777, Ensemble Accuracy = 0.1777, Bits = 15.32 MB, Time = 10.41s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01_seed789.json
+
+Training completed!
+Final average test accuracy: 0.1777
+Final ensemble accuracy:     0.1777
+Total communication: 17.26 MB
+Total time: 11.58 seconds
+=== Seed 1234: Run 1: lambda_reg=0 (baseline) ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5336, Ensemble Accuracy = 0.5555, Bits = 0.22 MB, Time = 1.50s
+Round  10: Avg Test Accuracy = 0.8697, Ensemble Accuracy = 0.8980, Bits = 2.37 MB, Time = 2.81s
+Round  20: Avg Test Accuracy = 0.9038, Ensemble Accuracy = 0.9131, Bits = 4.53 MB, Time = 4.07s
+Round  30: Avg Test Accuracy = 0.9089, Ensemble Accuracy = 0.9092, Bits = 6.69 MB, Time = 5.17s
+Round  40: Avg Test Accuracy = 0.9186, Ensemble Accuracy = 0.9298, Bits = 8.85 MB, Time = 6.47s
+Round  50: Avg Test Accuracy = 0.9325, Ensemble Accuracy = 0.9387, Bits = 11.01 MB, Time = 7.78s
+Round  60: Avg Test Accuracy = 0.9333, Ensemble Accuracy = 0.9337, Bits = 13.16 MB, Time = 9.08s
+Round  70: Avg Test Accuracy = 0.9376, Ensemble Accuracy = 0.9430, Bits = 15.32 MB, Time = 10.39s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda0.0_eta0.01_seed1234.json
+
+Training completed!
+Final average test accuracy: 0.9391
+Final ensemble accuracy:     0.9383
+Total communication: 17.26 MB
+Total time: 11.56 seconds
+=== Seed 1234: Run 2: lambda_reg=20.0 eta=0 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5211, Ensemble Accuracy = 0.5361, Bits = 0.22 MB, Time = 1.17s
+Round  10: Avg Test Accuracy = 0.8848, Ensemble Accuracy = 0.8929, Bits = 2.37 MB, Time = 2.47s
+Round  20: Avg Test Accuracy = 0.9135, Ensemble Accuracy = 0.9120, Bits = 4.53 MB, Time = 3.76s
+Round  30: Avg Test Accuracy = 0.9178, Ensemble Accuracy = 0.9108, Bits = 6.69 MB, Time = 5.05s
+Round  40: Avg Test Accuracy = 0.9317, Ensemble Accuracy = 0.9294, Bits = 8.85 MB, Time = 6.34s
+Round  50: Avg Test Accuracy = 0.9387, Ensemble Accuracy = 0.9306, Bits = 11.01 MB, Time = 7.63s
+Round  60: Avg Test Accuracy = 0.9356, Ensemble Accuracy = 0.9348, Bits = 13.16 MB, Time = 8.66s
+Round  70: Avg Test Accuracy = 0.9469, Ensemble Accuracy = 0.9422, Bits = 15.32 MB, Time = 9.96s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.0_seed1234.json
+
+Training completed!
+Final average test accuracy: 0.9449
+Final ensemble accuracy:     0.9418
+Total communication: 17.26 MB
+Total time: 11.11 seconds
+=== Seed 1234: Run 3: lambda_reg=20.0 eta=0.01 ===
+Preparing HAR dataset...
+Loading HAR dataset...
+Warning: data/task_index.npy not found. Creating synthetic client assignment.
+Client 0: Train samples = 771, Test samples = 258
+Client 1: Train samples = 3862, Test samples = 1288
+Dataset info: {'input_size': 561, 'num_classes': 6, 'num_clients': 2}
+Generating erdos_renyi communication graph...
+Graph statistics: {'num_nodes': 2, 'num_edges': 1, 'avg_degree': 1.0, 'max_degree': 1, 'min_degree': 1, 'diameter': 1, 'avg_clustering': 0.0, 'is_connected': True}
+Initializing client models...
+Initializing Sheaf-FMTL algorithm...
+Using device: cuda
+
+Starting training for 80 rounds...
+Communication bits per round: 215,808
+Number of parameters: 3372
+Round   0: Avg Test Accuracy = 0.5235, Ensemble Accuracy = 0.5485, Bits = 0.22 MB, Time = 1.61s
+Round  10: Avg Test Accuracy = 0.8685, Ensemble Accuracy = 0.8976, Bits = 2.37 MB, Time = 2.91s
+Round  20: Avg Test Accuracy = 0.9046, Ensemble Accuracy = 0.9100, Bits = 4.53 MB, Time = 4.21s
+Round  30: Avg Test Accuracy = 0.9065, Ensemble Accuracy = 0.9061, Bits = 6.69 MB, Time = 5.51s
+Round  40: Avg Test Accuracy = 0.9197, Ensemble Accuracy = 0.9271, Bits = 8.85 MB, Time = 6.80s
+Round  50: Avg Test Accuracy = 0.9279, Ensemble Accuracy = 0.9294, Bits = 11.01 MB, Time = 8.09s
+Round  60: Avg Test Accuracy = 0.9283, Ensemble Accuracy = 0.9368, Bits = 13.16 MB, Time = 9.29s
+Round  70: Avg Test Accuracy = 0.1486, Ensemble Accuracy = 0.1486, Bits = 15.32 MB, Time = 10.55s
+
+Results saved to results/sheaf_fmtl_har_gamma1.0_lambda20.0_eta0.01_seed1234.json
+
+Training completed!
+Final average test accuracy: 0.1486
+Final ensemble accuracy:     0.1486
+Total communication: 17.26 MB
+Total time: 11.66 seconds
+=== All runs complete. Plotting... ===
+Plot saved to results/har_comparison_gamma1.0.png
