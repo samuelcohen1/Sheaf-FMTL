@@ -1,0 +1,220 @@
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 211, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/experiments/run_rotated_mnist.py", line 66, in main
+    sheaf_fmtl = SheafFMTL(
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 41, in __init__
+    self.P = self._initialize_restriction_maps()
+  File "/home/samuel.cohen/Sheaf-FMTL/algorithms/sheaf_fmtl.py", line 61, in _initialize_restriction_maps
+    P[(j, i)] = torch.eye(num_params_j, device=self.device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.52 GiB. GPU 0 has a total capacity of 178.36 GiB of which 1.40 GiB is free. Including non-PyTorch memory, this process has 176.95 GiB memory in use. Of the allocated memory 176.21 GiB is allocated by PyTorch, and 53.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/apps/python/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/samuel.cohen/Sheaf-FMTL/utils/plot_compare_rmnist.py", line 78, in <module>
+    main(args)
+  File "/home/samuel.cohen/Sheaf-FMTL/utils/plot_compare_rmnist.py", line 43, in main
+    raise FileNotFoundError("No rotated MNIST result files found.")
+FileNotFoundError: No rotated MNIST result files found.
