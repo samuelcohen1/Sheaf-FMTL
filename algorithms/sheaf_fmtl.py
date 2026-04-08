@@ -51,14 +51,14 @@ class SheafFMTL:
             
             # Dimension of interaction space
             d_ij = int(self.gamma * min(num_params_i, num_params_j))
-            
-            # Initialize restriction maps on the selected device
-            # P[(i, j)] = (torch.randn(d_ij, num_params_i, device=self.device) * 0.01)
-            # P[(j, i)] = (torch.randn(d_ij, num_params_j, device=self.device) * 0.01)
-            #
+
+           #  Initialize restriction maps on the selected device
+            P[(i, j)] = (torch.randn(d_ij, num_params_i, device=self.device) * 0.01)
+            P[(j, i)] = (torch.randn(d_ij, num_params_j, device=self.device) * 0.01)
+
 # Initialize restriction maps as identity matrices (square, num_params x num_params)
-            P[(i, j)] = torch.eye(num_params_i, device=self.device)
-            P[(j, i)] = torch.eye(num_params_j, device=self.device)
+#             P[(i, j)] = torch.eye(num_params_i, device=self.device)
+#             P[(j, i)] = torch.eye(num_params_j, device=self.device)
 
         return P
     
