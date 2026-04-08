@@ -154,11 +154,13 @@ def main(args):
         'total_time_seconds': cumulative_time
     }
 
+    # In run_rotated_mnist.py, update the save_path logic:
     if args.save_results:
         if args.mode == 'sheaf':
-            save_path = f"results/sheaf_fmtl_rmnist_sheaf_gamma{args.gamma}_eta{args.eta}.json"
+            save_path = f"results/sheaf_fmtl_rmnist_sheaf_gamma{args.gamma}_eta{args.eta}_seed{args.seed}.json"
         else:
-            save_path = f"results/sheaf_fmtl_rmnist_local_gamma{args.gamma}.json"
+            save_path = f"results/sheaf_fmtl_rmnist_local_gamma{args.gamma}_seed{args.seed}.json"
+
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         with open(save_path, 'w') as f:
             json.dump(results, f, indent=2)
