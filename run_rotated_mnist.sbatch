@@ -57,4 +57,4 @@ for ETA in "${ETA_VALUES[@]}"; do
 done
 
 echo "=== All runs complete. Plotting... ==="
-python -u -m utils.plot_compare_mode --gamma $GAMMA
+python -u -m utils.plot_compare_rmnist --gamma $GAMMA --lambda_reg $LAMBDA_REG --eta 0.1
