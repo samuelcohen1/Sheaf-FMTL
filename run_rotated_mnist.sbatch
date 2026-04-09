@@ -14,14 +14,14 @@ source $PWD/venv/bin/activate
 
 GAMMA=0.1
 NUM_ROUNDS=20
-ALPHA=0.0051
-NUM_CLIENTS=10
+ALPHA=0.0005
+NUM_CLIENTS=4
 LAMBDA_REG=0.0011
 BATCH_SIZE=256
 LOCAL_EPOCHS=1
-GRAPH_TYPE=erdos_renyi
+GRAPH_TYPE=complete
 EDGE_PROBABILITY=0.2
-ETA_VALUES=(0.0001 0.1 1.0 10.0 100.0)
+ETA_VALUES=(0.0 0.1)
 
 echo "=== Running independent baseline ==="
 python -u -m experiments.run_rotated_mnist \
@@ -35,7 +35,6 @@ python -u -m experiments.run_rotated_mnist \
     --batch_size $BATCH_SIZE \
     --local_epochs $LOCAL_EPOCHS \
     --graph_type $GRAPH_TYPE \
-    --edge_probability $EDGE_PROBABILITY \
     --seed 42 \
     --save_results
 
@@ -53,7 +52,6 @@ for ETA in "${ETA_VALUES[@]}"; do
         --batch_size $BATCH_SIZE \
         --local_epochs $LOCAL_EPOCHS \
         --graph_type $GRAPH_TYPE \
-        --edge_probability $EDGE_PROBABILITY \
         --seed 42 \
         --save_results
 done
