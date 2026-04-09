@@ -1,0 +1,48 @@
+{
+  "args": {
+    "num_clients": 8,
+    "num_rotations": 8,
+    "lambda_reg": 0.001,
+    "alpha": 0.0005,
+    "eta": 1e-05,
+    "gamma": 0.1,
+    "num_rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 32,
+    "l2_strength": 0.01,
+    "graph_type": "complete",
+    "edge_probability": 0.15,
+    "seed": 42
+  },
+  "graph_stats": {
+    "num_nodes": 8,
+    "num_edges": 28,
+    "avg_degree": 7.0,
+    "max_degree": 7,
+    "min_degree": 7,
+    "diameter": 1,
+    "avg_clustering": 1.0,
+    "is_connected": true
+  },
+  "local_times": [
+    7.249967940151691,
+    2.4516241885721684,
+    2.4481316627934575,
+    2.4358388213440776,
+    2.4462914345785975
+  ],
+  "sheaf_times": [
+    0.02616863790899515,
+    0.0048416126519441605,
+    0.004719765856862068,
+    0.004803475923836231,
+    0.004763433709740639
+  ],
+  "restrict_times": [
+    0.005587327294051647,
+    0.003286176361143589,
+    0.003291003406047821,
+    0.003253127448260784,
+    0.003266681917011738
+  ]
+}
