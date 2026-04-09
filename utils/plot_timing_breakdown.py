@@ -15,32 +15,42 @@ def main():
     local_times    = np.array(data['local_times'])
     sheaf_times    = np.array(data['sheaf_times'])
     restrict_times = np.array(data['restrict_times'])
-    rounds = np.arange(len(local_times))
 
     labels  = ['Local Training', 'Sheaf Update', 'Restriction Map Update']
     arrays  = [local_times, sheaf_times, restrict_times]
     colors  = ['tab:blue', 'tab:orange', 'tab:green']
 
-    fig, ax = plt.subplots(figsize=(10, 5))
+    means = [arr.mean() for arr in arrays]
+    stds  = [arr.std()  for arr in arrays]
 
-    for label, arr, color in zip(labels, arrays, colors):
-        mean = arr.mean()
-        std  = arr.std()
-        ax.plot(rounds, arr, alpha=0.3, color=color, linewidth=0.8)
-        ax.axhline(mean, color=color, linewidth=2.0, label=f"{label} (μ={mean:.4f}s, σ={std:.4f}s)")
-        ax.axhspan(mean - std, mean + std, alpha=0.15, color=color)
+    fig, ax = plt.subplots(figsize=(8, 5))
+
+    x = np.arange(len(labels))
+    bars = ax.bar(x, means, yerr=stds, capsize=8, color=colors, alpha=0.85,
+                  error_kw={'elinewidth': 2, 'ecolor': 'black'})
+
+    # Annotate each bar with mean ± std
+    for bar, mean, std in zip(bars, means, stds):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height() + std + max(means) * 0.01,
+            f"{mean:.4f}s\n±{std:.4f}s",
+            ha='center', va='bottom', fontsize=9
+        )
 
     args = data.get('args', {})
-    ax.set_xlabel("Round", fontsize=12)
-    ax.set_ylabel("Wall-clock Time (s)", fontsize=12)
+    num_rounds = len(local_times)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=11)
+    ax.set_ylabel("Average Wall-clock Time per Round (s)", fontsize=12)
     ax.set_title(
         f"Sheaf-FMTL Timing Breakdown — Rotated MNIST\n"
         f"({args.get('num_clients', 8)} clients, complete graph, "
-        f"γ={args.get('gamma', 0.1)}, {len(rounds)} rounds)",
+        f"γ={args.get('gamma', 0.1)}, {num_rounds} rounds)",
         fontsize=13
     )
-    ax.legend(fontsize=10)
-    ax.grid(True, alpha=0.4)
+    ax.grid(True, axis='y', alpha=0.4)
 
     plt.tight_layout()
     save_path = "results/timing_breakdown.png"
