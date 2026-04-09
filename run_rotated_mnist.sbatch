@@ -1,45 +1,65 @@
 #!/bin/bash
-#SBATCH --job-name=sheaf_fmtl
+#SBATCH --job-name=sheaf_fmtl_rmnist
 #SBATCH --partition=hpg-b200
 #SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=00:30:00
-#SBATCH --output=logs/slurm-%j.out
-#SBATCH --error=logs/slurm-%j.err
+#SBATCH --time=02:00:00
+#SBATCH --output=logs/slurm-rmnist-%j.out
+#SBATCH --error=logs/slurm-rmnist-%j.err
 
 source $PWD/venv/bin/activate
 
+mkdir -p logs
+mkdir -p results
+
 GAMMA=0.1
 NUM_ROUNDS=20
-ALPHA=0.0005
+ALPHA=0.0051
 NUM_CLIENTS=4
 LAMBDA_REG=0.0011
 BATCH_SIZE=256
 LOCAL_EPOCHS=1
 GRAPH_TYPE=complete
-EDGE_PROBABILITY=0.2
-ETA_VALUES=(0.0 0.1)
+ETA=0.1
 
-echo "=== Running independent baseline ==="
-python -u -m experiments.run_rotated_mnist \
-    --mode local \
-    --num_rounds $NUM_ROUNDS \
-    --num_clients $NUM_CLIENTS \
-    --num_rotations 4 \
-    --gamma $GAMMA \
-    --alpha $ALPHA \
-    --lambda_reg $LAMBDA_REG \
-    --batch_size $BATCH_SIZE \
-    --local_epochs $LOCAL_EPOCHS \
-    --graph_type $GRAPH_TYPE \
-    --seed 42 \
-    --save_results
+SEEDS=(42 123 456 789 1234)
 
-for ETA in "${ETA_VALUES[@]}"; do
-    echo "=== Running Sheaf-FMTL with eta=$ETA ==="
+for SEED in "${SEEDS[@]}"; do
+    echo "=== Seed $SEED: Running independent baseline ==="
+    python -u -m experiments.run_rotated_mnist \
+        --mode local \
+        --num_rounds $NUM_ROUNDS \
+        --num_clients $NUM_CLIENTS \
+        --num_rotations 4 \
+        --gamma $GAMMA \
+        --alpha $ALPHA \
+        --lambda_reg $LAMBDA_REG \
+        --batch_size $BATCH_SIZE \
+        --local_epochs $LOCAL_EPOCHS \
+        --graph_type $GRAPH_TYPE \
+        --seed $SEED \
+        --save_results
+
+    echo "=== Seed $SEED: Running Sheaf-FMTL with eta=0.0 (fixed maps) ==="
+    python -u -m experiments.run_rotated_mnist \
+        --mode sheaf \
+        --num_rounds $NUM_ROUNDS \
+        --num_clients $NUM_CLIENTS \
+        --num_rotations 4 \
+        --gamma $GAMMA \
+        --alpha $ALPHA \
+        --eta 0.0 \
+        --lambda_reg $LAMBDA_REG \
+        --batch_size $BATCH_SIZE \
+        --local_epochs $LOCAL_EPOCHS \
+        --graph_type $GRAPH_TYPE \
+        --seed $SEED \
+        --save_results
+
+    echo "=== Seed $SEED: Running Sheaf-FMTL with eta=$ETA (learned maps) ==="
     python -u -m experiments.run_rotated_mnist \
         --mode sheaf \
         --num_rounds $NUM_ROUNDS \
@@ -52,9 +72,9 @@ for ETA in "${ETA_VALUES[@]}"; do
         --batch_size $BATCH_SIZE \
         --local_epochs $LOCAL_EPOCHS \
         --graph_type $GRAPH_TYPE \
-        --seed 42 \
+        --seed $SEED \
         --save_results
 done
 
 echo "=== All runs complete. Plotting... ==="
-python -u -m utils.plot_compare_rmnist --gamma $GAMMA --lambda_reg $LAMBDA_REG --eta 0.1
+python -u -m utils.plot_compare_rmnist --gamma $GAMMA --lambda_reg $LAMBDA_REG --eta $ETA
