@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
-#SBATCH --time=01:00:00
+#SBATCH --time=00:20:00
 #SBATCH --output=logs/slurm-gpu-speedup-%j.out
 #SBATCH --error=logs/slurm-gpu-speedup-%j.err
 
@@ -15,11 +15,11 @@ source $PWD/venv/bin/activate
 mkdir -p logs
 mkdir -p results
 
-NUM_ROUNDS=10
+NUM_ROUNDS=5
 ALPHA=0.0051
-NUM_CLIENTS=4
+NUM_CLIENTS=2
 LAMBDA_REG=0.0011
-BATCH_SIZE=256
+BATCH_SIZE=512
 LOCAL_EPOCHS=1
 GRAPH_TYPE=complete
 ETA=0.1
@@ -35,7 +35,7 @@ for SEED in "${SEEDS[@]}"; do
         --mode sheaf \
         --num_rounds $NUM_ROUNDS \
         --num_clients $NUM_CLIENTS \
-        --num_rotations 4 \
+        --num_rotations 2 \
         --gamma $GAMMA \
         --alpha $ALPHA \
         --eta $ETA \
@@ -59,7 +59,7 @@ for SEED in "${SEEDS[@]}"; do
         --mode sheaf \
         --num_rounds $NUM_ROUNDS \
         --num_clients $NUM_CLIENTS \
-        --num_rotations 4 \
+        --num_rotations 2 \
         --gamma $GAMMA \
         --alpha $ALPHA \
         --eta $ETA \
